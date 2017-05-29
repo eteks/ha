@@ -584,3 +584,191 @@ left: 43px;
     padding-top: 5px !important;
     padding-bottom: 5px !important;
 }*/
+.cctv4 {
+    left: 10px;
+    position: absolute;
+    top: -8px;
+}
+.dimmer_wrapper1,.dimmer_wrapper2,.dimmer_wrapper3,.dimmer_wrapper4 {
+    background: #f8f8f8 none repeat scroll 0 0;
+    height: 70px;
+    left: -30px;
+    position: absolute;
+    top: -79px;
+    width: 141px;
+    visibility: hidden;
+    padding: 10px 15px 12px;
+    border: 1px #f1f1f1 solid;
+}
+.light1:hover .dimmer_wrapper1,.light2:hover .dimmer_wrapper2,.light3:hover .dimmer_wrapper3,.light4:hover .dimmer_wrapper4{
+	visibility: visible;
+}
+.dimmer_wrapper1:after,.dimmer_wrapper2:after,.dimmer_wrapper3:after,.dimmer_wrapper4:after{
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid #f8f8f8;
+    content: "";
+    left: 28px;
+    position: absolute;
+    top: 100%;
+}
+.dimmer_name{
+	line-height:8px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 4.5px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background: rgba(216, 216, 216, 0.78);
+  border-radius: 0px;
+  border: 0px solid rgba(0, 0, 0, 0);
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 13px;
+  width: 13px;
+  border-radius: 6.5px;
+  background: #23cf5f;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(226, 226, 226, 0.78);
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background: rgba(216, 216, 216, 0.78);
+  border-radius: 0px;
+  border: 0px solid rgba(0, 0, 0, 0);
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 13px;
+  width: 13px;
+  border-radius: 6.5px;
+  background: #23cf5f;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: rgba(206, 206, 206, 0.78);
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+input[type=range]::-ms-fill-upper {
+  background: rgba(216, 216, 216, 0.78);
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 13px;
+  width: 13px;
+  border-radius: 6.5px;
+  background: #23cf5f;
+  cursor: pointer;
+  height: 4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(216, 216, 216, 0.78);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: rgba(226, 226, 226, 0.78);
+}
+
+.sub_range {
+    background: #d8d8d8 none repeat scroll 0 0;
+    float: left;
+    height: 10px;
+    margin-right: 6px;
+    width: 4px;
+    border-radius:5px;
+}
+.range_active {
+    background: #23cf5f none repeat scroll 0 0;
+}
+.ac_wrapper{
+    background: #f8f8f8 none repeat scroll 0 0;
+    height: 70px;
+    left: -36px;
+    position: absolute;
+    top: -82px;
+    width: 143px;
+    visibility: hidden;
+    border: 1px #f1f1f1 solid;
+}
+.ac_hover:hover .ac_wrapper{
+	visibility: visible;
+}
+.ac_wrapper:after{
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid #f8f8f8;
+    content: "";
+    left: 28px;
+    position: absolute;
+    top: 100%;
+}
+.ac_temp_wrapper,.ac_onoff_wrapper {
+    float: left;
+    height: 100%;
+    width: 50%;
+    padding: 12px 3px 17px 13px;
+}
+.ac_onoff_wrapper {
+    float: left;
+    height: 100%;
+    width: 70px;
+}
+.ac_temp_text {
+    font-size: 13px;
+}
+.ac_temp_plus,.ac_temp_minus {
+    float: left;
+    line-height:8px;
+	padding:5px 9px;
+	cursor:pointer;
+}
+.ac_temp_plus_minus {
+    border: 1px solid #000;
+    height: 50%;
+    width: 100%;
+}
+.ac_temp_plus {
+    border-right: 1px solid #000;
+}
+.ac_onoff_button{
+	background: url(../images/aconoff.png);
+	height:23px;
+	width:23px;
+}
+.ac_onoff_button_wrapper {
+    padding-left: 10px;
+    cursor:pointer;
+}

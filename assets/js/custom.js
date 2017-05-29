@@ -133,7 +133,64 @@ $(document).ready(function(){
 		$('#backgroundPopup').height(win_height);
     }
     
-
+    $('.dimmer_range').val('0');
+    $('.dimmer_range').on('change',function(){
+    	var range_val = $(this).val();
+    	var max_range = $(this).attr('max');
+    	for(var r=1;r<=range_val;r++){
+    		$(this).parents('.dimmer_wrapper').find('.sub_range_wrapper').find('.range'+r).addClass('range_active');
+    	}
+    	for(var rr=parseInt(range_val)+1;rr<=max_range;rr++){
+    		$(this).parents('.dimmer_wrapper').find('.sub_range_wrapper').find('.range'+rr).removeClass('range_active');
+    	}
+    });
+    $('.ac_temp_val').text($('.ac_temp_val').attr('current-temp'));
+    $('.ac_temp_plus').on('click',function(){
+    	var current_temp = parseInt($('.ac_temp_val').attr('current-temp'))+1;
+    	var maximum_temp = parseInt($('.ac_temp_val').attr('ac-max'));
+    	var minimum_temp = parseInt($('.ac_temp_val').attr('ac-min'));
+    	if(current_temp >= minimum_temp && current_temp <= maximum_temp){
+    		$('.ac_temp_val').attr('current-temp',current_temp);
+    		$('.ac_temp_val').text(current_temp);
+    	}
+    	else{
+    		alert('You cannot set temparature at above '+maximum_temp);
+    	}
+    });
+    $('.ac_temp_minus').on('click',function(){
+    	var current_temp = parseInt($('.ac_temp_val').attr('current-temp'))-1;
+    	var maximum_temp = parseInt($('.ac_temp_val').attr('ac-max'));
+    	var minimum_temp = parseInt($('.ac_temp_val').attr('ac-min'));
+    	if(current_temp >= minimum_temp && current_temp <= maximum_temp){
+    		$('.ac_temp_val').attr('current-temp',current_temp);
+    		$('.ac_temp_val').text(current_temp);
+    	}
+    	else{
+    		alert('You cannot set temparature at below' +minimum_temp);
+    	}
+    });
+    var ac_status = $('.ac_wrapper').attr('ac-status');
+    if(ac_status == 'off'){
+    	$('.ac_temp_wrapper').hide();
+    	$('.ac_onoff_button').css('background-image', 'url("../images/acoffon.png")');
+    }
+    else{
+    	$('.ac_temp_wrapper').show();
+    	$('.ac_onoff_button').css('background-image', 'url("../images/aconoff.png ")');
+    }
+	$('.ac_onoff_button').on('click',function(){
+		var ac_current_status = $('.ac_wrapper').attr('ac-status');
+		if(ac_current_status == 'off'){
+	    	$('.ac_temp_wrapper').show();
+	    	$('.ac_wrapper').attr('ac-status','on');
+	    	$('.ac_onoff_button').css('background-image', 'url("../images/aconoff.png")');
+	    }
+	    else{
+	    	$('.ac_temp_wrapper').hide();
+	    	$('.ac_wrapper').attr('ac-status','off');
+	    	$('.ac_onoff_button').css('background-image', 'url("../images/acoffon.png ")');
+	    }
+	});
 });
 
 
