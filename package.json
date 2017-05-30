@@ -3,6 +3,8 @@
   "version": "7.10.0",
   "description": "Home Automation using Node.js",
   "dependencies": {
-    "express": "4"
+    "express": "4",
+    "request": "*",
+    "socket.io":"*"
   }
 }
