@@ -5,7 +5,7 @@ $(document).ready(function(){
 		var height=$('.popup_pos').height();
 	    var width=$('.popup_pos').width();
 	    $('.popup_pos').css({'margin-top': -height / 2 + "px", 'margin-left': -width / 2 + "px"});
-	}	
+	}
 
 	$('.material-switch').on('change',function(){
 		var parent_cls = jQuery($(this).data('href'));
@@ -20,7 +20,7 @@ $(document).ready(function(){
 			parent.find(child_cls).removeClass('light1_on');
 			parent.find(child_cls).addClass('light1_off');
 		}
-                             
+
         if(parent.find(child_cls).hasClass('light2_off')) {
 			parent.find(child_cls).removeClass('light2_off');
 			parent.find(child_cls).addClass('light2_on');
@@ -29,7 +29,7 @@ $(document).ready(function(){
 			parent.find(child_cls).removeClass('light2_on');
 			parent.find(child_cls).addClass('light2_off');
 		}
-                
+
        	if(parent.find(child_cls).hasClass('light3_off')) {
 			parent.find(child_cls).removeClass('light3_off');
 			parent.find(child_cls).addClass('light3_on');
@@ -38,7 +38,7 @@ $(document).ready(function(){
 			parent.find(child_cls).removeClass('light3_on');
 			parent.find(child_cls).addClass('light3_off');
 		}
-                
+
         if(parent.find(child_cls).hasClass('ac_off')) {
 			parent.find(child_cls).removeClass('ac_off');
 			parent.find(child_cls).addClass('ac_on');
@@ -47,7 +47,7 @@ $(document).ready(function(){
 			parent.find(child_cls).removeClass('ac_on');
 			parent.find(child_cls).addClass('ac_off');
 		}
-                
+
         if(parent.find(child_cls).hasClass('cctv1_off')) {
 			parent.find(child_cls).removeClass('cctv1_off');
 			parent.find(child_cls).addClass('cctv1_on');
@@ -56,7 +56,7 @@ $(document).ready(function(){
 			parent.find(child_cls).removeClass('cctv1_on');
 			parent.find(child_cls).addClass('cctv1_off');
 		}
-                
+
         if(parent.find(child_cls).hasClass('cctv2_off')) {
 			parent.find(child_cls).removeClass('cctv2_off');
 			parent.find(child_cls).addClass('cctv2_on');
@@ -65,7 +65,7 @@ $(document).ready(function(){
 			parent.find(child_cls).removeClass('cctv2_on');
 			parent.find(child_cls).addClass('cctv2_off');
 		}
-                
+
         if(parent.find(child_cls).hasClass('tubelight_off')) {
 			parent.find(child_cls).removeClass('tubelight_off');
 			parent.find(child_cls).addClass('tubelight_on');
@@ -74,23 +74,23 @@ $(document).ready(function(){
 			parent.find(child_cls).removeClass('tubelight_on');
 			parent.find(child_cls).addClass('tubelight_off');
 		}
-                                         
-                
+
+
 //		if(parent.find(child_cls).hasClass('light_off')) {
 //			parent.find(child_cls).removeClass('light_off');
 //			parent.find(child_cls).addClass('light_on');
 //		}
-//		else if($(this).data('options')=="light") { 
+//		else if($(this).data('options')=="light") {
 //			parent.find(child_cls).removeClass('light_on');
 //			parent.find(child_cls).addClass('light_off');
 //		}
-                
-                
+
+
 		if(parent.find(child_cls).hasClass('fan_off')) {
 			parent.find(child_cls).removeClass('fan_off');
 			parent.find(child_cls).addClass('fan_on');
 		}
-	    else if($(this).data('options')=="fan") { 
+	    else if($(this).data('options')=="fan") {
 			parent.find(child_cls).removeClass('fan_on');
 			parent.find(child_cls).addClass('fan_off');
 		}
@@ -99,14 +99,14 @@ $(document).ready(function(){
 
 	$('.cctv_act').click(function() {
 		$('#backgroundPopup').show();
-		$('.popup_pos').fadeIn();		
+		$('.popup_pos').fadeIn();
    		position_popup ();
    		$('.vxgplayer').attr('url',$(this).data('url'));
 	});
 
 	$('.popup_close').click(function() {
 		$(this).parent().fadeOut();
-		$('#backgroundPopup').hide();		
+		$('#backgroundPopup').hide();
 	});
 
 
@@ -122,7 +122,7 @@ $(document).ready(function(){
 	   		$('#backgroundPopup').height(win_height);
 	   }
 	});
-	
+
     //positioning background
     var body_win_height = $(document).height();
     var win_height = $(window).height();
@@ -132,7 +132,7 @@ $(document).ready(function(){
     } else {
 		$('#backgroundPopup').height(win_height);
     }
-    
+
     $('.dimmer_range').val('0');
     $('.dimmer_range').on('change',function(){
     	var range_val = $(this).val();
@@ -191,6 +191,114 @@ $(document).ready(function(){
 	    	$('.ac_onoff_button').css('background-image', 'url("../images/acoffon.png ")');
 	    }
 	});
+	// tv controll
+
+	var tv_status = $('.tv_parent_wrapper').attr('tv-status');
+
+	if(tv_status == 'off'){
+    	$('.tv_onoff_button').css('background-image', 'url("../images/acoffon.png")');
+    	$(".tv_number_menu_mute, .tv_vol, .tv_ch").hide();
+
+    }
+    else{
+    	$('.tv_onoff_button').css('background-image', 'url("../images/aconoff.png ")');
+    	$(".tv_number_menu_mute,.tv_vol,.tv_ch").show();
+    }
+    $('.tv_onoff_button').on('click',function(){
+    	var tv_current_status = $('.tv_parent_wrapper').attr('tv-status');
+    	if(tv_current_status == 'off'){
+	    	$('.tv_onoff_button').css('background-image', 'url("../images/aconoff.png")');
+	    	$(".tv_number_menu_mute, .tv_vol, .tv_ch").show();
+	    	$('.tv_parent_wrapper').attr('tv-status','on');
+
+
+	    }
+	    else{
+	    	$('.tv_onoff_button').css('background-image', 'url("../images/acoffon.png ")');
+	    	$(".tv_number_menu_mute,.tv_vol,.tv_ch").hide();
+	    	$('.tv_parent_wrapper').attr('tv-status','off');
+	    }
+    });
+    $('.tv_vol_val').text($('.tv_vol_val').attr('current-vol'));
+    $('.tv_vol_plus').on('click',function(){
+    	var current_vol = parseInt($('.tv_vol_val').attr('current-vol'))+1;
+    	var maximum_vol = parseInt($('.tv_vol_val').attr('tv-vol-max'));
+    	var minimum_vol = parseInt($('.tv_vol_val').attr('tv-vol-min'));
+    	if(current_vol >= minimum_vol && current_vol <= maximum_vol){
+    		$('.tv_vol_val').attr('current-vol',current_vol);
+    		$('.tv_vol_val').text(current_vol);
+    	}
+    	else{
+    		alert('You cannot set volume at above '+maximum_vol);
+    	}
+    	if(current_vol > 0){
+    		$('.tv_mute_button').css('background-image', 'url("../images/tv_mute_off.png")');
+    	}
+    });
+    $('.tv_vol_minus').on('click',function(){
+    	var current_vol = parseInt($('.tv_vol_val').attr('current-vol'))-1;
+    	var maximum_vol = parseInt($('.tv_vol_val').attr('tv-vol-max'));
+    	var minimum_vol = parseInt($('.tv_vol_val').attr('tv-vol-min'));
+    	if(current_vol >= minimum_vol && current_vol <= maximum_vol){
+    		$('.tv_vol_val').attr('current-vol',current_vol);
+    		$('.tv_vol_val').text(current_vol);
+    	}
+    	else{
+    		alert('You cannot set volume at above '+minimum_vol);
+    	}
+    	if(current_vol == '0'){
+    		$('.tv_mute_button').css('background-image', 'url("../images/tv_mute_on.png")');
+    	}
+    });
+
+    $('.tv_ch_val').text($('.tv_ch_val').attr('current-ch'));
+    $('.tv_ch_plus').on('click',function(){
+    	var current_ch = parseInt($('.tv_ch_val').attr('current-ch'))+1;
+		$('.tv_ch_val').attr('current-ch',current_ch);
+		$('.tv_ch_val').text(current_ch);
+    });
+    $('.tv_ch_minus').on('click',function(){
+    	var current_ch = parseInt($('.tv_ch_val').attr('current-ch'))-1;
+		$('.tv_ch_val').attr('current-ch',current_ch);
+		$('.tv_ch_val').text(current_ch);
+    });
+    $('.tv_mute_button').on('click',function(){
+    	var current_vol = parseInt($('.tv_vol_val').attr('current-vol'));
+    	if(current_vol > 0){
+    		$('.tv_mute_button').css('background-image', 'url("../images/tv_mute_on.png")');
+    		$('.tv_vol_val').attr('current-vol',0);
+    		$('.tv_vol_val').attr('previous-vol',current_vol);
+    		$('.tv_vol_val').text('0');
+    	}
+    	else{
+    		$('.tv_mute_button').css('background-image', 'url("../images/tv_mute_off.png")');
+    		$('.tv_vol_val').attr('current-vol',$('.tv_vol_val').attr('previous-vol'));
+    		$('.tv_vol_val').text($('.tv_vol_val').attr('previous-vol'));
+    		$('.tv_vol_val').attr('previous-vol',0);
+
+    	}
+    });
+	$('.light4 .dimmer_onoff_button').on('click',function(){
+		var light4_status = $('.light4').attr('data-status');
+		if(light4_status == 'off'){
+	    	$('.light4').attr('data-status','on');
+	    	$('.dimmer_onoff_button').css('background-image', 'url("../images/aconoff.png")');
+	    }
+	    else{
+	    	$('.light4').attr('data-status','off');
+	    	$('.dimmer_onoff_button').css('background-image', 'url("../images/acoffon.png ")');
+	    }
+	});
+
+	$('.tubelight_onoff_button').on('click',function(){
+		var tube_status = $('.tubelight_off').attr('data-status');
+		if(tube_status == 'off'){
+	    	$('.tubelight_off').attr('data-status','on');
+	    	$('.tubelight_onoff_button').css('background-image', 'url("../images/aconoff.png")');
+	    }
+	    else{
+	    	$('.tubelight_off').attr('data-status','off');
+	    	$('.tubelight_onoff_button').css('background-image', 'url("../images/acoffon.png ")');
+	    }
+	});
 });
-
-

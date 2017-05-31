@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home Automation</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/new_style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
+    <link href="css/vxgplayer-1.7.44.min.css" rel="stylesheet"/><!-- include css -->
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="main_wrapper">
+                <div class="floor_plan">
+                    <img src="images//new_floor.png"/>
+                    <div class="board_room_light1"></div>
+                    <div class="board_room_light2"></div>
+                    <div class="board_room_light3"></div>
+                    <div class="board_room_tv"></div>
+                    <div class="it_room_light"></div>
+                    <div class="it_room_ac"></div>
+                    <div class="warehouse_camera"></div>
+                    <div class="mainroom_sensor"></div>
+                    <div class="mainroom_camera"></div>
+                    <div class="warehouse_inner_camera"></div>
+                    <div class="floor_outer_camera"></div>
+                    <div class="floor_outer_tubelight"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="backgroundPopup"></div>
+    <div class="popup_pos">
+        <div class="popup_close"></div>
+        <!-- <iframe width="920" height="500" src="https://www.youtube.com/embed/Zm_V37O58KI" frameborder="0" allowfullscreen></iframe> -->
+        <div class="vxgplayer"
+        id="vxg_media_player1"
+        width="900"
+        height="500"
+        url=""
+        nmf-src="pnacl/Release/media_player.nmf"
+        nmf-path="media_player.nmf"
+        useragent-prefix="MMP/3.0"
+        latency="10000"
+        autohide="2"
+        volume="0.7"
+        autostart=true
+        avsync
+        mute
+        aspect-ratio
+        aspect-ratio-mode="1"
+        auto-reconnect></div>
+    </div><!-- contact_form_wrapper -->
+</body>
+<!-- JAVASCRIPT JS  -->
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/vxgplayer-1.7.44.min.js"></script><!-- include JS-->
+<script type="text/javascript" src="js/new_custom.js"></script>
+
+
+</html>

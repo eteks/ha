@@ -16,7 +16,7 @@
     <!--cdn-->
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">  -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
-    <link href="css/vxgplayer-1.7.44.min.css" rel="stylesheet"/><!-- include css -->  
+    <link href="css/vxgplayer-1.7.44.min.css" rel="stylesheet"/><!-- include css -->
 </head>
 
 <body>
@@ -29,7 +29,7 @@
                         <p>Security and Home manage products manage household safety, reduce energy consumption</p>
                     </div>
                 </div><!--row1-->
-            </div>        
+            </div>
         </div>
     </section>
     <section class="ctrl_appliances">
@@ -63,19 +63,19 @@
                                                 <label for="someSwitchOptionInfo3" class="label-info"></label>
                                             </div>
                                         </li>
-                                        
-                                        
+
+
                                         <!--tubelight_off tubelight-->
-                                      
-                                        
-                                        
+
+
+
                                     </ul>
                                     <div class="panel-heading">IT Room</div>
                                     <!-- List group -->
                                     <ul class="list-group">
                                         <li class="list-group-item">
                                             <img width="60" height="40" src="images//air-on.jpg" alt="air-on" /><span class="tex">  Air Conditioner </span>
-                                            <div class="material-switch pull-right" data-href="#living_room" data-options="ac">                   
+                                            <div class="material-switch pull-right" data-href="#living_room" data-options="ac">
                                             <input id="someSwitchOptionInfo4" class="cmn-toggle cmn-toggle-on" name="someSwitchOption001" type="checkbox" />
                                                 <label for="someSwitchOptionInfo4" class="label-info"></label>
                                             </div>
@@ -101,15 +101,17 @@
                                         <li class="list-group-item">
                                             <img width="57" height="42" src="images//cctv.png" alt="cctv1" /><span class="tex">  CCTV </span>
                                             <div class="material-switch pull-right" data-href="#master_suite" data-options="cctv1">
-                                                <input id="someSwitchOptionInfo7" class="cmn-toggle cmn-toggle-on" name="someSwitchOption001" type="checkbox" />
-                                                <label for="someSwitchOptionInfo7" class="label-info"></label>
+                                                <!-- input id="someSwitchOptionInfo7" class="cmn-toggle cmn-toggle-on" name="someSwitchOption001" type="checkbox" />
+                                                <label for="someSwitchOptionInfo7" class="label-info"></label> -->
+                                                <img src="images//cctv_eye.png" alt="cctv" height="25" style="margin: 0px; width:37px;"/>
                                             </div>
                                         </li>
                                         <li class="list-group-item">
                                             <img width="45" height="56" src="images//cctv.png" alt="cctv2" /><span class="tex">  CCTV </span>
                                             <div class="material-switch pull-right" data-href="#master_suite" data-options="cctv2">
-                                                <input id="someSwitchOptionInfo8" class="cmn-toggle cmn-toggle-on" name="someSwitchOption001" type="checkbox" />
-                                                <label for="someSwitchOptionInfo8" class="label-info"></label>
+                                                <!-- <input id="someSwitchOptionInfo8" class="cmn-toggle cmn-toggle-on" name="someSwitchOption001" type="checkbox" />
+                                                <label for="someSwitchOptionInfo8" class="label-info"></label> -->
+                                                <img src="images//cctv_eye.png" alt="cctv" height="25" style="margin: 0px; width:37px;"/>
                                             </div>
                                         </li>
 <!--                                        <li class="list-group-item">
@@ -133,8 +135,9 @@
                                         <li class="list-group-item">
                                             <img width="45" height="56" src="images//cctv.png" alt="cctv1" /><span class="tex">  CCTV </span>
                                             <div class="material-switch pull-right" data-href="#bedroom_one" data-options="cctv1">
-                                                <input id="someSwitchOptionInfo11" class="cmn-toggle cmn-toggle-on" name="someSwitchOption001" type="checkbox" />
-                                                <label for="someSwitchOptionInfo11" class="label-info"></label>
+                                                <!-- <input id="someSwitchOptionInfo11" class="cmn-toggle cmn-toggle-on" name="someSwitchOption001" type="checkbox" />
+                                                <label for="someSwitchOptionInfo11" class="label-info"></label> -->
+                                                <img src="images//cctv_eye.png" alt="cctv" height="25" style="margin: 0px; width:37px;"/>
                                             </div>
                                         </li>
 <!--                                        <li class="list-group-item">
@@ -149,7 +152,7 @@
                         </div> <!--BS or btn_control-->
                         <!---Image area-->
                         <div id="home_plan" class="col-xs-3 col-md-8 col-lg-8 hidden-sm hidden-xs no-pad" style="float:right;">
-                            
+
                             <img src="images//outer.png" alt="home" class="home_img center-block">
                             <!-- <img width="45" class="img-on-top" height="56" src="images//ligth.jpg" alt="lights" />
                             <img width="57" class="img-on-top2" height="42" src="images//air-on.jpg" alt="air-on" />
@@ -157,54 +160,147 @@
                             <div>
                                 <ul id="double_garage">
                                     <li class="light1_off light1">
-                                    	<div class="dimmer_wrapper1 dimmer_wrapper">
-                                			<div class="dimmer_name">Dimmer</div>
-                                			<div><input type="range" min="0" max="7" step="1" class="dimmer_range"></div>
-                                			<div class="sub_range_wrapper">
-                                				<div class="range1 sub_range"></div>
-                                				<div class="range2 sub_range"></div>
-                                				<div class="range3 sub_range"></div>
-                                				<div class="range4 sub_range"></div>
-                                				<div class="range5 sub_range"></div>
-                                				<div class="range6 sub_range"></div>
-                                				<div class="range7 sub_range"></div>
-                                				<div class="clearfix"></div>
-                                			</div>
-                                		</div>
+                                        <div class="dimmer_parent">
+                                        	<div class="dimmer_wrapper1 dimmer_wrapper">
+                                    			<div class="dimmer_name">Dimmer</div>
+                                    			<div><input type="range" min="0" max="99" step="1" class="dimmer_range"></div>
+                                    			<div class="sub_range_wrapper">
+                                    				<div class="range10 sub_range"></div>
+                                    				<div class="range20 sub_range"></div>
+                                    				<div class="range30 sub_range"></div>
+                                    				<div class="range40 sub_range"></div>
+                                    				<div class="range50 sub_range"></div>
+                                    				<div class="range60 sub_range"></div>
+                                    				<div class="range70 sub_range"></div>
+                                                    <div class="range80 sub_range"></div>
+                                                    <div class="range90 sub_range"></div>
+                                    				<div class="clearfix"></div>
+                                    			</div>
+                                    		</div>
+                                            <div class="dimmer_onoff">
+                                                <div class="dimmer_onoff_text">On/Off</div>
+                                                <div class="dimmer_onoff_button_wrapper">
+                                                    <div class="dimmer_onoff_button"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 	</li>
                                     <li class="light2_off light2">
-                                    	<div class="dimmer_wrapper2 dimmer_wrapper">
-                                			<div class="dimmer_name">Dimmer</div>
-                                			<div><input type="range" min="0" max="7" step="1" class="dimmer_range"></div>
-                                			<div class="sub_range_wrapper">
-                                				<div class="range1 sub_range"></div>
-                                				<div class="range2 sub_range"></div>
-                                				<div class="range3 sub_range"></div>
-                                				<div class="range4 sub_range"></div>
-                                				<div class="range5 sub_range"></div>
-                                				<div class="range6 sub_range"></div>
-                                				<div class="range7 sub_range"></div>
-                                				<div class="clearfix"></div>
-                                			</div>
-                                		</div>
+                                        <div class="dimmer_parent">
+                                        	<div class="dimmer_wrapper2 dimmer_wrapper">
+                                    			<div class="dimmer_name">Dimmer</div>
+                                    			<div><input type="range" min="0" max="99" step="1" class="dimmer_range"></div>
+                                    			<div class="sub_range_wrapper">
+                                    				<div class="range10 sub_range"></div>
+                                    				<div class="range20 sub_range"></div>
+                                    				<div class="range30 sub_range"></div>
+                                    				<div class="range40 sub_range"></div>
+                                    				<div class="range50 sub_range"></div>
+                                    				<div class="range60 sub_range"></div>
+                                    				<div class="range70 sub_range"></div>
+                                                    <div class="range80 sub_range"></div>
+                                                    <div class="range90 sub_range"></div>
+                                    				<div class="clearfix"></div>
+                                    			</div>
+                                    		</div>
+                                            <div class="dimmer_onoff">
+                                                <div class="dimmer_onoff_text">On/Off</div>
+                                                <div class="dimmer_onoff_button_wrapper">
+                                                    <div class="dimmer_onoff_button"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li class="light3_off light3">
-                                    	<div class="dimmer_wrapper3 dimmer_wrapper">
-                                			<div class="dimmer_name">Dimmer</div>
-                                			<div><input type="range" min="0" max="7" step="1" class="dimmer_range"></div>
-                                			<div class="sub_range_wrapper">
-                                				<div class="range1 sub_range"></div>
-                                				<div class="range2 sub_range"></div>
-                                				<div class="range3 sub_range"></div>
-                                				<div class="range4 sub_range"></div>
-                                				<div class="range5 sub_range"></div>
-                                				<div class="range6 sub_range"></div>
-                                				<div class="range7 sub_range"></div>
-                                				<div class="clearfix"></div>
-                                			</div>
-                                		</div>
+                                        <div class="dimmer_parent">
+                                        	<div class="dimmer_wrapper3 dimmer_wrapper">
+                                    			<div class="dimmer_name">Dimmer</div>
+                                    			<div><input type="range" min="0" max="99" step="1" class="dimmer_range"></div>
+                                    			<div class="sub_range_wrapper">
+                                    				<div class="range10 sub_range"></div>
+                                    				<div class="range20 sub_range"></div>
+                                    				<div class="range30 sub_range"></div>
+                                    				<div class="range40 sub_range"></div>
+                                    				<div class="range50 sub_range"></div>
+                                    				<div class="range60 sub_range"></div>
+                                    				<div class="range70 sub_range"></div>
+                                                    <div class="range80 sub_range"></div>
+                                                    <div class="range90 sub_range"></div>
+                                    				<div class="clearfix"></div>
+                                    			</div>
+                                    		</div>
+                                            <div class="dimmer_onoff" data-status="off">
+                                                <div class="dimmer_onoff_text">On/Off</div>
+                                                <div class="dimmer_onoff_button_wrapper">
+                                                    <div class="dimmer_onoff_button"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </li>
-                                     <li class="tv_off tv"> </li>
+                                     <li class="tv_off tv tv_hover tv_parent_wrapper" tv-status="on">
+                                     	<div class="tv_wrapper">
+                                     		<div class="tv_inner_wrapper">
+                                     			<div class="tv_onoff_vol_ch">
+                                     				<div class="tv_onoff">
+                                    					<div class="tv_onoff_text">On/Off</div>
+                                    					<div class="tv_onoff_button_wrapper">
+                                    						<div class="tv_onoff_button"></div>
+                                						</div>
+                                     				</div>
+                                     				<div class="tv_vol">
+                                     					<div class="tv_vol_text">Vol : <span class="tv_vol_val" tv-vol-min="0" tv-vol-max="100" current-vol="20" previous-vol="0"></span></div>
+		                                    			<div class="tv_vol_plus_minus">
+		                                    				<div class="tv_vol_plus">+</div><div class="tv_vol_minus">-</div>
+		                                    			</div>
+                                     				</div>
+                                     				<div class="tv_ch">
+                                     					<div class="tv_ch_text">Ch : <span class="tv_ch_val" current-ch="20"></span></div>
+		                                    			<div class="tv_ch_plus_minus">
+		                                    				<div class="tv_ch_plus">+</div><div class="tv_ch_minus">-</div>
+		                                    			</div>
+                                     				</div>
+                                     			</div>
+                                     			<div class="tv_number_menu_mute">
+                                     				<div class="tv_number">
+                                     					<div class="tv_number_col1">
+                                     						<div class="tv_number_row1"><div class="tv_press_number" data-val="1">1</div></div>
+                                     						<div class="tv_number_row2"><div class="tv_press_number" data-val="4">4</div></div>
+                                     						<div class="tv_number_row3"><div class="tv_press_number" data-val="7">7</div></div>
+                                     						<div class="tv_number_row4"></div>
+                                     					</div>
+                                     					<div class="tv_number_col2">
+                                     						<div class="tv_number_row1"><div class="tv_press_number" data-val="2">2</div></div>
+                                     						<div class="tv_number_row2"><div class="tv_press_number" data-val="5">5</div></div>
+                                     						<div class="tv_number_row3"><div class="tv_press_number" data-val="8">8</div></div>
+                                     						<div class="tv_number_row4"><div class="tv_press_number" data-val="0">0</div></div>
+                                     					</div>
+                                     					<div class="tv_number_col3">
+                                     						<div class="tv_number_row1"><div class="tv_press_number" data-val="3">3</div></div>
+                                     						<div class="tv_number_row2"><div class="tv_press_number" data-val="6">6</div></div>
+                                     						<div class="tv_number_row3"><div class="tv_press_number" data-val="9">9</div></div>
+                                     						<div class="tv_number_row4"></div>
+                                     					</div>
+                                     				</div>
+                                     				<div class="tv_menu_mute">
+                                     					<div class="tv_menu_wrapper">
+                                     						<div class="tv_menu_text">Menu</div>
+                                     						<div class="tv_menu_button_wrapper">
+                                     							<div class="tv_menu_button"></div>
+                                     							<div class="tv_menu_button"></div>
+                                     							<div class="tv_menu_button"></div>
+                                     						</div>
+                                     					</div>
+                                     					<div class="tv_mute_wrapper">
+                                     						<div class="tv_mute_text">Mute</div>
+                                     						<div class="tv_mute_button_wrapper">
+                                     							<div class="tv_mute_button"></div>
+                                     						</div>
+                                     					</div>
+                                     				</div>
+                                     			</div>
+                                 			</div>
+                                     	</div>
+                                     </li>
                                 </ul>
                                 <div class="clearfix"></div>
                                 <ul id="living_room">
@@ -223,9 +319,9 @@
                                     		</div>
                                     	</div>
                                     </li>
-                                    <li class="light1_off light1 light4">
-                                    	<div class="dimmer_wrapper4 dimmer_wrapper">
-                                			<div class="dimmer_name">Dimmer</div>
+                                    <li class="light1_off light1 light4" data-status="off" >
+                                    	<div class="dimmer_wrapper4 dimmer_wrapper" style="width:77px;">
+                                			<!-- <div class="dimmer_name">Dimmer</div>
                                 			<div><input type="range" min="0" max="7" step="1" class="dimmer_range"></div>
                                 			<div class="sub_range_wrapper">
                                 				<div class="range1 sub_range"></div>
@@ -236,7 +332,12 @@
                                 				<div class="range6 sub_range"></div>
                                 				<div class="range7 sub_range"></div>
                                 				<div class="clearfix"></div>
-                                			</div>
+                                			</div> -->
+                                            <div class="dimmer_onoff_text">On/Off</div>
+                                            <div class="dimmer_onoff_button_wrapper">
+                                                <div class="dimmer_onoff_button"></div>
+                                            </div>
+
                                 		</div>
                                     <li>
 <!--                                    <li class="fan_off fan"> </li>-->
@@ -244,27 +345,34 @@
 -->                                <ul id="master_suite">
                                     <li class="cctv1_off cctv1 cctv_act" data-url="rtsp://admin:ssstech1969@192.168.0.200/Streaming/Channels/301"> </li>
                                     <li class="cctv2_off cctv2 cctv_act" data-url="rtsp://admin:ssstech1969@192.168.0.200/Streaming/Channels/401"> <li>
-                                    
+
                                 </ul><!--
 -->                                <ul id="bedroom_one">
-                                       
-                                         <ol class="tubelight_off tubelight"> </ol>
+
+                                         <ol class="tubelight_off tubelight" data-status="off">
+                                             <div class="tubelight_onoff">
+                                                 <div class="tubelight_onoff_text">On/Off</div>
+                                                 <div class="tubelight_onoff_button_wrapper">
+                                                     <div class="tubelight_onoff_button"></div>
+                                                 </div>
+                                             </div>
+                                         </ol>
                                          <!-- <a href="http://192.168.0.17:3000/cctv.html" target="__blank"><ol class="cctv1_off cctv1"> </ol></a> -->
                                          <ol class="cctv1_off cctv1 cctv_act" data-url="rtsp://admin:ssstech1969@192.168.0.200/Streaming/Channels/101"> </ol>
 <!--                                    <li class="fan_off fan"> </li>-->
                                 </ul>
                             </div>
-                        </div>    
+                        </div>
                     </div> <!--row2-->
             </div> <!--container-->
         </div> <!--bs-->
         <!-- Popup to display live stream video for CCTV -->
         <div id="backgroundPopup"></div>
         <div class="popup_pos">
-            <div class="popup_close"></div>         
+            <div class="popup_close"></div>
             <!-- <iframe width="920" height="500" src="https://www.youtube.com/embed/Zm_V37O58KI" frameborder="0" allowfullscreen></iframe> -->
             <div class="vxgplayer"
-                id="vxg_media_player1" 
+                id="vxg_media_player1"
                 width="900"
                 height="500"
                 url=""
@@ -281,9 +389,9 @@
                 aspect-ratio-mode="1"
                 auto-reconnect></div>
         </div><!-- contact_form_wrapper -->
-   
+
     </section>
-  
+
 </body>
 
 <!-- JAVASCRIPT JS  -->

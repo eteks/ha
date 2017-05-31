@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/gotham-medium-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/gotham-medium-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/gotham-medium-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/gotham-medium-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/gotham-medium-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+#backgroundPopup {
+  display:none;
+  position:absolute;
+  top:0px;
+  height:100%;
+  width:100%;
+  background:#000000;
+  z-index:98;
+  -moz-opacity: 0.4;
+   opacity:.40;
+   filter: alpha(opacity=40);
+}
+.popup_pos {
+  display:none;
+  position:absolute;
+  margin-left:-236px;
+  top:50%;
+  left:50%;
+  z-index:200;
+}
+
+.popup_close {
+  background: url(../images/icons.png) 0px -113px repeat;
+  position:absolute;
+  width:23px;
+  height:24px;
+  margin:-20px 0px 0px -10px;
+  cursor:pointer;
+}
+
+.main_wrapper{
+    position: relative;;
+}
+.main_wrapper .floor_plan{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.board_room_light1{
+    position: absolute;
+    background: url(../images/new_light_on.png) no-repeat;
+    height: 31px;
+    width: 25px;
+    top: 51px;
+    left: 25px;
+    cursor: pointer;
+}
+.board_room_light2{
+    position: absolute;
+    background: url(../images/new_light_on.png) no-repeat;
+    height: 31px;
+    width: 25px;
+    top: 51px;
+    left: 76px;
+    cursor: pointer;
+}
+.board_room_light3{
+    position: absolute;
+    background: url(../images/new_light_on.png) no-repeat;
+    height: 31px;
+    width: 25px;
+    top: 51px;
+    left: 126px;
+    cursor: pointer;
+}
+.board_room_tv{
+    position: absolute;
+    background: url(../images/new_tv_off.png) no-repeat;
+    height: 50px;
+    width: 16px;
+    top: 44px;
+    left: 165px;
+    cursor: pointer;
+}
+.it_room_light{
+    position: absolute;
+    background: url(../images/new_light_off.png) no-repeat;
+    height: 50px;
+    width: 25px;
+    top: 51px;
+    left: 202px;
+    cursor: pointer;
+}
+.it_room_ac{
+    position: absolute;
+    background: url(../images/new_ac_off.png) no-repeat;
+    height: 25px;
+    width: 32px;
+    top: 117px;
+    left: 188px;
+    cursor: pointer;
+}
+.warehouse_camera{
+    position: absolute;
+    background: url(../images/new_rgt_camera_off.png) no-repeat;
+    height: 25px;
+    width: 32px;
+    top: 32px;
+    left: 568px;
+    cursor: pointer;
+}
+.mainroom_sensor{
+    position: absolute;
+    background: url(../images/new_sensor.png) no-repeat;
+    height: 16px;
+    width: 37px;
+    top: 141px;
+    left: 108px;
+}
+.mainroom_camera{
+    position: absolute;
+    background: url(../images/new_btm_camera_off.png) no-repeat;
+    height: 32px;
+    width: 32px;
+    top: 141px;
+    left: 172px;
+    cursor: pointer;
+}
+.warehouse_inner_camera{
+    position: absolute;
+    background: url(../images/new_btm_camera_off.png) no-repeat;
+    height: 32px;
+    width: 32px;
+    top: 181px;
+    left: 378px;
+    cursor: pointer;
+}
+.floor_outer_camera{
+    position: absolute;
+    background: url(../images/new_btm_camera_off.png) no-repeat;
+    height: 32px;
+    width: 32px;
+    top: 412px;
+    left: 191px;
+    cursor: pointer;
+}
+.floor_outer_tubelight{
+    position: absolute;
+    background: url(../images/new_tube_light_off.png) no-repeat;
+    height: 13px;
+    width: 43px;
+    top: 411px;
+    left: 123px;
+    cursor: pointer;
+}

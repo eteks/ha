@@ -11,4 +11,3 @@ app.use(express.static('assets')); //This folder contains the css and js files
 app.listen(3000);
 
 console.log("Running at Port 3000");
-

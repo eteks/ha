@@ -3,7 +3,14 @@
 /*
  * Main content
  */
-
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/gotham-medium-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/gotham-medium-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/gotham-medium-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/gotham-medium-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/gotham-medium-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
 .main {
   padding: 20px;
 }
@@ -12,14 +19,14 @@
 }
 
 .material-switch > input[type="checkbox"] {
-    display: none;   
+    display: none;
 }
 
 .material-switch > label {
     cursor: pointer;
     height: 0px;
-    position: relative; 
-    width: 40px;  
+    position: relative;
+    width: 40px;
 }
 .material-switch > label::before {
     background: rgb(208, 1, 27);
@@ -203,7 +210,7 @@ ul li{
     left: 120px;
 }
 .ac_off{
-  background: url('../images/all_appliances_sprite.png') 0px 0px; 
+  background: url('../images/all_appliances_sprite.png') 0px 0px;
 /*  position: relative;*/
   bottom: 185px;
   left: 20px;
@@ -211,7 +218,7 @@ ul li{
   height: 35px;
 }
 .ac_on{
-  background: url('../images/all_appliances_sprite.png') -40px 0px; 
+  background: url('../images/all_appliances_sprite.png') -40px 0px;
 /*  position: relative;*/
   bottom: 185px;
 /*  left: 20px;*/
@@ -219,7 +226,7 @@ ul li{
   height: 35px;
 }
 .light_off{
-  background: url('../images/all_appliances_sprite.png') -80px 0px; 
+  background: url('../images/all_appliances_sprite.png') -80px 0px;
   position: relative;
   bottom: 185px;
   left: 20px;
@@ -227,7 +234,7 @@ ul li{
   height: 35px;
 }
 .light_on{
-  background: url('../images/all_appliances_sprite.png') -120px 0px; 
+  background: url('../images/all_appliances_sprite.png') -120px 0px;
   position: relative;
   bottom: 185px;
   left: 20px;
@@ -235,7 +242,7 @@ ul li{
   height: 35px;
 }
 .fan_off{
-  background: url('../images/all_appliances_sprite.png') -160px 0px; 
+  background: url('../images/all_appliances_sprite.png') -160px 0px;
   position: relative;
   bottom: 185px;
   left: 25px;
@@ -243,7 +250,7 @@ ul li{
   height: 35px;
 }
 .fan_on{
-  background: url('../images/all_appliances_sprite.png') -200px 0px; 
+  background: url('../images/all_appliances_sprite.png') -200px 0px;
   position: relative;
   bottom: 185px;
   left: 25px;
@@ -266,23 +273,23 @@ ul li{
 /* added here */
 
 .light1_off,.light2_off,.light3_off{
-  background: url('../images/download2.png'); 
+  background: url('../images/download2.png');
    background-position: -10px -112px; width: 26px; height: 25px;
 }
 
 .tv_off{
-  background: url('../images/tv.png'); 
+  background: url('../images/tv.png');
    width: 50px; height: 8px;
 }
 
 
 
 .light1_on,.light2_on,.light3_on{
-  background: url('../images/download2.png'); 
+  background: url('../images/download2.png');
 background-position: -10px -0px; width: 26px; height: 25px;
 }
 
-.light1_off,.light1_on,.light2_off,.light2_on,.light3_off,.light3_on{ 
+.light1_off,.light1_on,.light2_off,.light2_on,.light3_off,.light3_on{
 /*  position: relative;*/
   bottom: 185px;
 /*  left: 20px;*/
@@ -292,20 +299,20 @@ background-position: -10px -0px; width: 26px; height: 25px;
 
 
 .ac_off{
-  background: url('../images/download2.png') ; 
- background-position: -10px -250px; width: 23px; height: 31px; 
-  
+  background: url('../images/download2.png') ;
+ background-position: -10px -250px; width: 23px; height: 31px;
+
 }
 
 
 .ac_on{
-  background: url('../images/download2.png') ; 
- background-position: -10px -291px; width: 23px; height: 31px; 
+  background: url('../images/download2.png') ;
+ background-position: -10px -291px; width: 23px; height: 31px;
 }
 
 
 
-.ac_on,.ac_off{ 
+.ac_on,.ac_off{
 /*  position: relative;*/
   bottom: 185px;
   left: 20px;
@@ -315,15 +322,15 @@ background-position: -10px -0px; width: 26px; height: 25px;
 
 
 .cctv1_on,.cctv2_on{
-    background: url('../images/download2.png') ; 
+    background: url('../images/download2.png') ;
   background-position: -10px -79px; width: 30px; height: 34px;
-   
+
 }
 
 .cctv1_off,.cctv2_off{
-    background: url('../images/download2.png') ; 
+    background: url('../images/download2.png') ;
    background-position: -10px -35px; width: 30px; height: 34px;
-    
+
 }
 
 
@@ -331,25 +338,25 @@ background-position: -10px -0px; width: 26px; height: 25px;
 
 .tubelight_on{
     transform: rotate(360deg);
-    background: url('../images/download2.png') ; 
+    background: url('../images/download2.png') ;
     background-position: -10px -197px; width: 25px; height: 43px;
 }
 
 .tubelight_off{
-        
-  background: url('../images/download2.png') ; 
+  cursor: pointer;
+  background: url('../images/download2.png') ;
   background-position: -10px -144px; width: 25px; height: 43px;
-  
+
 }
 
 
-.tubelight_on,.tubelight_off{  
+.tubelight_on,.tubelight_off{
 /*  position: relative;*/
- 
+
 }
 
 
-.cctv2_on,.cctv2_off{   
+.cctv2_on,.cctv2_off{
     transform: rotate(270deg);
 }
 
@@ -360,7 +367,7 @@ background-position: -10px -0px; width: 26px; height: 25px;
 
 
 
-.cctv1_on,.cctv1_off,.cctv2_on,.cctv2_off{ 
+.cctv1_on,.cctv1_off,.cctv2_on,.cctv2_off{
 /*  position: relative;*/
 /*  bottom: 185px;
   left: 20px;*/
@@ -407,20 +414,20 @@ top: 0;
     top: 50px;
 }
 
-#double_garage .light3_off{    
+#double_garage .light3_off{
         left: 12px;
     bottom: 0;
     position: relative;
     top: 75px;
 }
 
-#double_garage .light3_on  {    
+#double_garage .light3_on  {
     left: 8px;
     bottom: 0;
     position: relative;
     top: 75px;
 }
-#double_garage .tv_off{    
+#double_garage .tv_off{
     left: 0;
     bottom: 0;
     position: relative;
@@ -431,13 +438,13 @@ top: 0;
 
 
 #living_room .ac_off,#living_room .ac_on{
-    
+
 /*  left: 75PX;*/
         position: relative;
     top: 11px;
     bottom: 0;
     left: 0;
-   
+
 }
 
 #living_room .light1_off,#living_room .light1_on{
@@ -446,7 +453,7 @@ top: 0;
 }
 
 #living_room .light1_off{
-   
+
    left: 48px;
 /*    left: 175px;*/
 }
@@ -474,29 +481,29 @@ left: 43px;
 
 
 #master_suite .cctv1_off{
-    
+
 /*   bottom: 930px;
     left: 24px;*/
 }
 
 #master_suite .cctv1_on{
-    
+
 /*   bottom: 938px;
     left: 24px;*/
 }
 
 #master_suite .cctv1_off,#master_suite .cctv1_on,#master_suite .cctv2_off,#master_suite .cctv2_on{
-    
+
     position: relative;
 }
 
 #master_suite .cctv1_off{
-    
+
     top: 30px;
     left: 2px;
 }
 #master_suite .cctv1_on{
-    
+
     top: 33px;
     left: 2px;
 }
@@ -504,12 +511,12 @@ left: 43px;
 
 
 #master_suite .cctv2_off{
-    
+
     top: 210px;
     left: 152px;
 }
 #master_suite .cctv2_on{
-    
+
     top: 211px;
     left: 155px;
 }
@@ -539,7 +546,7 @@ left: 43px;
   z-index:98;
   -moz-opacity: 0.4;
    opacity:.40;
-   filter: alpha(opacity=40); 
+   filter: alpha(opacity=40);
 }
 
 .popup_close {
@@ -554,29 +561,29 @@ left: 43px;
 
 
 #bedroom_one .cctv1_off{
-    
+
 /*    bottom: 880PX;
     left: -70px;*/
 }
 #bedroom_one .cctv1_on{
-    
+
 /*bottom: 877px;
     left: -70px;*/
 }
 
 
 #bedroom_one .tubelight_on{
-    
+
 /* bottom: 1009px;
     left: -63px;*/
-} 
+}
 
 
 #bedroom_one .tubelight_off{
-    
+
 /* bottom: 1012px;
     left: -48px;*/
-} 
+}
 
 
 
@@ -589,6 +596,37 @@ left: 43px;
     position: absolute;
     top: -8px;
 }
+.dimmer_onoff,.tubelight_onoff{
+    position: absolute;
+    visibility: hidden;
+    height: 70px;
+    left: 109px;
+    top: -79px;
+    width: 70px;
+    background: #f8f8f8 none repeat scroll 0 0;
+    padding: 10px 15px 12px;
+}
+.dimmer_onoff_text,.tubelight_onoff_text{
+	font-family:gotham;
+	font-size:13px;
+}
+.dimmer_onoff_button,.tubelight_onoff_button{
+	background: url(../images/acoffon.png);
+	height:23px;
+	width:23px;
+    cursor: pointer;
+}
+.tubelight_onoff{
+    background: #f8f8f8 none repeat scroll 0 0;
+    height: 70px;
+    left: -30px;
+    position: absolute;
+    top: -79px;
+    width: 77px;
+    visibility: hidden;
+    padding: 10px 15px 12px;
+    border: 1px #f1f1f1 solid;
+}
 .dimmer_wrapper1,.dimmer_wrapper2,.dimmer_wrapper3,.dimmer_wrapper4 {
     background: #f8f8f8 none repeat scroll 0 0;
     height: 70px;
@@ -600,10 +638,13 @@ left: 43px;
     padding: 10px 15px 12px;
     border: 1px #f1f1f1 solid;
 }
-.light1:hover .dimmer_wrapper1,.light2:hover .dimmer_wrapper2,.light3:hover .dimmer_wrapper3,.light4:hover .dimmer_wrapper4{
+.light1:hover .dimmer_wrapper1,.light1:hover .dimmer_onoff,.light2:hover .dimmer_wrapper2,.light2:hover .dimmer_onoff,.light3:hover .dimmer_wrapper3,.light3:hover .dimmer_onoff,.light4:hover .dimmer_wrapper4{
 	visibility: visible;
 }
-.dimmer_wrapper1:after,.dimmer_wrapper2:after,.dimmer_wrapper3:after,.dimmer_wrapper4:after{
+.tubelight_off:hover .tubelight_onoff{
+    visibility: visible;
+}
+.dimmer_wrapper1:after,.dimmer_wrapper2:after,.dimmer_wrapper3:after,.dimmer_wrapper4:after,.tubelight_onoff:after{
     border-left: 13px solid transparent;
     border-right: 13px solid transparent;
     border-top: 13px solid #f8f8f8;
@@ -614,8 +655,13 @@ left: 43px;
 }
 .dimmer_name{
 	line-height:8px;
+	font-family:gotham;
 }
-
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+  .dimmer_wrapper > div {
+    margin-bottom: 10px;
+  }
+}
 input[type=range] {
   -webkit-appearance: none;
   width: 100%;
@@ -771,4 +817,147 @@ input[type=range]:focus::-ms-fill-upper {
 .ac_onoff_button_wrapper {
     padding-left: 10px;
     cursor:pointer;
+}
+.tv_wrapper{
+    background: #f8f8f8 none repeat scroll 0 0;
+    height: 165px;
+    left: -17px;
+    position: absolute;
+    top: -177px;
+    width: 165px;
+    visibility: hidden;
+    border: 1px #f1f1f1 solid;
+}
+.tv_hover:hover .tv_wrapper{
+	visibility: visible;
+}
+.tv_wrapper:after{
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid #f8f8f8;
+    content: "";
+    left: 28px;
+    position: absolute;
+    top: 100%;
+}
+.tv_inner_wrapper {
+    height: 146px;
+    margin: 8px 12px 9px 14px;
+    width: 137px;
+}
+.tv_onoff_vol_ch{
+	height:100%;
+	width: 40%;
+	float:left;
+}
+.tv_number_menu_mute{
+	height:100%;
+	width: 60%;
+	float:left;
+}
+.tv_onoff,.tv_vol,.tv_ch{
+	width:100%;
+	height: 33.33%;
+}
+.tv_onoff_button_wrapper {
+    padding-left: 10px;
+    cursor:pointer;
+}
+.tv_onoff_text{
+	font-family:gotham;
+	font-size:13px;
+}
+.tv_onoff_button{
+	background: url(../images/aconoff.png);
+	height:23px;
+	width:23px;
+}
+.tv_vol_text {
+    font-size: 13px;
+    font-family:gotham;
+}
+.tv_vol_plus,.tv_vol_minus {
+    float: left;
+    line-height:8px;
+	padding:7px 9px;
+	cursor:pointer;
+}
+.tv_vol_plus_minus {
+    border: 1px solid #000;
+    height: 50%;
+    width: 100%;
+}
+.tv_vol_plus {
+    border-right: 1px solid #000;
+}
+.tv_ch_text {
+    font-size: 13px;
+    font-family:gotham;
+}
+.tv_ch_plus,.tv_ch_minus {
+    float: left;
+    line-height:8px;
+	padding:7px 9px;
+	cursor:pointer;
+}
+.tv_ch_plus_minus {
+    border: 1px solid #000;
+    height: 50%;
+    width: 100%;
+}
+.tv_ch_plus {
+    border-right: 1px solid #000;
+}
+.tv_number{
+	height:66.66%;
+	width: 100%;
+	margin:0px 5px;
+}
+.tv_menu_mute{
+	height:33.33%;
+	width: 100%;
+	margin:0px 5px;
+}
+.tv_number_col1,.tv_number_col2,.tv_number_col3{
+	width:33.33%;
+	height:100%;
+	float: left;
+}
+.tv_number_row1,.tv_number_row2,.tv_number_row3,.tv_number_row4{
+	height:25%;
+	width:100%;
+}
+.tv_press_number {
+    border: 1px solid #9f9f9f;
+    border-radius: 21px;
+    text-align: center;
+    cursor: pointer;
+    height:22px;
+    width:22px;
+}
+.tv_menu_wrapper,.tv_mute_wrapper{
+	width: 50%;
+	float: left;
+}
+.tv_menu_button{
+	background: url(../images/tv_menu_bar.png);
+	height:3px;
+	width:28px;
+	text-align:center;
+	margin-bottom:3px;
+}
+.tv_menu_text,.tv_mute_text{
+	font-family: gotham;
+	font-size:13px;
+}
+.tv_menu_button_wrapper,.tv_mute_button_wrapper {
+    margin: 5px 0 0 0px;
+    cursor: pointer;
+}
+.tv_mute_button{
+	background: rgba(0, 0, 0, 0) url("../images/tv_mute_off.png") no-repeat scroll 0 0;
+    height: 18px;
+    margin-bottom: 3px;
+    text-align: center;
+    width: 16px;
 }
