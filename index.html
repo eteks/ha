@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -159,11 +160,11 @@
                             <img width="40" class="img-on-top3" height="40" src="images//fan.jpg" alt="fans" /> -->
                             <div>
                                 <ul id="double_garage">
-                                    <li class="light1_off light1">
+                                    <li class="light1_off light1 light_on_off_act" data-deviceid="23">
                                         <div class="dimmer_parent">
                                         	<div class="dimmer_wrapper1 dimmer_wrapper">
                                     			<div class="dimmer_name">Dimmer</div>
-                                    			<div><input type="range" min="0" max="99" step="1" class="dimmer_range"></div>
+                                    			<div><input type="range" min="0" max="99" step="1" class="dimmer_range light_dimmer_act" data-deviceid="33"></div>
                                     			<div class="sub_range_wrapper">
                                     				<div class="range10 sub_range"></div>
                                     				<div class="range20 sub_range"></div>
@@ -304,22 +305,22 @@
                                 </ul>
                                 <div class="clearfix"></div>
                                 <ul id="living_room">
-                                	<li class="cctv1_off cctv4 cctv_act" data-url=""> </li>
+                                  <li class="cctv1_off cctv4 cctv_act" data-url=""> </li>
                                     <li class="ac_off ac ac_hover">
-                                    	<div class="ac_wrapper" ac-status="off">
-                                    		<div class="ac_temp_wrapper">
-                                    			<div class="ac_temp_text">Temp :<span class="ac_temp_val" ac-min="16" ac-max="25" current-temp="20"></span></div>
-                                    			<div class="ac_temp_plus_minus">
-                                    				<div class="ac_temp_plus">+</div><div class="ac_temp_minus">-</div>
-                                    			</div>
-                                    		</div>
-                                    		<div class="ac_onoff_wrapper">
-                                    			<div class="ac_onoff_text">On/Off</div>
-                                    			<div class="ac_onoff_button_wrapper"><div class="ac_onoff_button"></div></div>
-                                    		</div>
-                                    	</div>
+                                      <div class="ac_wrapper" ac-status="off">
+                                        <div class="ac_temp_wrapper">
+                                          <div class="ac_temp_text">Temp :<span class="ac_temp_val" ac-min="16" ac-max="25" current-temp="20"></span></div>
+                                          <div class="ac_temp_plus_minus">
+                                            <div class="ac_temp_plus">+</div><div class="ac_temp_minus">-</div>
+                                          </div>
+                                        </div>
+                                        <div class="ac_onoff_wrapper">
+                                          <div class="ac_onoff_text">On/Off</div>
+                                          <div class="ac_onoff_button_wrapper"><div class="ac_onoff_button"></div></div>
+                                        </div>
+                                      </div>
                                     </li>
-                                    <li class="light1_off light1 light4" data-status="off" >
+                                    <li class="light1_off light1 light4 light_on_off_act" data-status="off" data-deviceid="18">
                                     	<div class="dimmer_wrapper4 dimmer_wrapper" style="width:77px;">
                                 			<!-- <div class="dimmer_name">Dimmer</div>
                                 			<div><input type="range" min="0" max="7" step="1" class="dimmer_range"></div>
@@ -395,9 +396,9 @@
 </body>
 
 <!-- JAVASCRIPT JS  -->
+<script type="text/javascript" src="js/socket.io-1.3.5.js"></script>
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 <script type="text/javascript" src="js/vxgplayer-1.7.44.min.js"></script><!-- include JS-->
 <script type="text/javascript" src="js/custom.js"></script>
-
-
+<script type="text/javascript" src="js/socket_custom.js"></script>
 </html>
