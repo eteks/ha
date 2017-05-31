@@ -137,6 +137,7 @@ $(document).ready(function(){
     $('.dimmer_range').on('change',function(){
     	var range_val = $(this).val();
     	var max_range = $(this).attr('max');
+    	// alert(range_val);
     	for(var r=1;r<=range_val;r++){
     		$(this).parents('.dimmer_wrapper').find('.sub_range_wrapper').find('.range'+r).addClass('range_active');
     	}
