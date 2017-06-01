@@ -16,17 +16,22 @@ console.log("Running at Port 3000");
 
 io.sockets.on('connection', function (socket) {
     socket.on('api_data', function (data) {
-    	console.log(data);
+    	// console.log(data);
     	if(data.purpose == "light_on_off"){
-    		console.log("if");
+    		// console.log("if");
     		url='http://192.168.0.18/api/callAction';
     		qs = { deviceID: data.deviceid, name: data.act };
     	}
     	else if(data.purpose == "light_dimmer"){
-    		console.log("else if");
+    		// console.log("else if");
     		url='http://192.168.0.18/api/callAction';
     		qs = { deviceID: data.deviceid, name: data.act, arg1:data.range};
     	}
+        else if(data.purpose == "tv_control"){
+            console.log("tv_control");
+            url='http://192.168.0.18/api/callAction';
+            qs = { deviceID: data.deviceid, name: data.act, arg1:data.button_id};
+        }
         var options = { method: 'GET',
 		url: url,
 		qs: qs,
@@ -34,11 +39,12 @@ io.sockets.on('connection', function (socket) {
 	    { 'postman-token': 'bf759df7-714a-781f-f424-f1fc799ecc41',
 	     'cache-control': 'no-cache',
 	     authorization: 'Basic c2F0aGVlc2hAd2ViZXppLmNvbS5hdTpXZWJlemkxMiE=' } };
-
+        // console.log(options); 
 		request(options, function (error, response, body) {
 		  if (error) throw new Error(error);
+          // console.log(response);
 		  // console.log(body);
 		});
     });
-	console.log("User Connected");
+	// console.log("User Connected");
 });

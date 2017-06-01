@@ -50,26 +50,26 @@
                                     <div class="dimmer_off_button"></div>
                                 </div>
                             </div>
-                            <div class="board_room_tv" tv-status="off">
+                            <div class="board_room_tv" tv-status="off" data-deviceid="23">
                                 <div class="tv_wrapper">
                                     <div class="tv_inner_wrapper">
                                         <div class="tv_onoff_vol_ch">
                                             <div class="tv_onoff">
                                                 <div class="tv_onoff_text">On/Off</div>
                                                 <div class="tv_onoff_button_wrapper">
-                                                    <div class="tv_onoff_button"></div>
+                                                    <div class="tv_onoff_button tv_onoff_act"></div>
                                                 </div>
                                             </div>
                                             <div class="tv_vol">
                                                 <div class="tv_vol_text">Vol : <span class="tv_vol_val" tv-vol-min="0" tv-vol-max="100" current-vol="20" previous-vol="0"></span></div>
                                                 <div class="tv_vol_plus_minus">
-                                                    <div class="tv_vol_plus">+</div><div class="tv_vol_minus">-</div>
+                                                    <div class="tv_vol_plus tv_control_act" data-buttonid="Button21">+</div><div class="tv_vol_minus tv_control_act" data-buttonid="Button22">-</div>
                                                 </div>
                                             </div>
                                             <div class="tv_ch">
                                                 <div class="tv_ch_text">Ch : <span class="tv_ch_val" current-ch="20"></span></div>
                                                 <div class="tv_ch_plus_minus">
-                                                    <div class="tv_ch_plus">+</div><div class="tv_ch_minus">-</div>
+                                                    <div class="tv_ch_plus tv_control_act" data-buttonid="Button23">+</div><div class="tv_ch_minus tv_control_act" data-buttonid="Button24">-</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -99,7 +99,7 @@
                                             <div class="tv_menu_mute">
                                                 <div class="tv_menu_wrapper">
                                                     <div class="tv_menu_text">Menu</div>
-                                                    <div class="tv_menu_button_wrapper">
+                                                    <div class="tv_menu_button_wrapper tv_control_act" data-buttonid="Button52">
                                                         <div class="tv_menu_button"></div>
                                                         <div class="tv_menu_button"></div>
                                                         <div class="tv_menu_button"></div>
@@ -107,7 +107,7 @@
                                                 </div>
                                                 <div class="tv_mute_wrapper">
                                                     <div class="tv_mute_text">Mute</div>
-                                                    <div class="tv_mute_button_wrapper">
+                                                    <div class="tv_mute_button_wrapper tv_control_act" data-buttonid="Button51">
                                                         <div class="tv_mute_button"></div>
                                                     </div>
                                                 </div>
@@ -143,11 +143,11 @@
                             <div class="it_room_ac_off_button"></div>
                         </div>
                     </div>
-                    <div class="warehouse_camera"></div>
+                    <div class="warehouse_camera cctv_act" data-url="rtsp://admin:ssstech1969@192.168.0.200/Streaming/Channels/301" title="Factory Rear"></div>
                     <div class="mainroom_sensor"></div>
-                    <div class="mainroom_camera"></div>
-                    <div class="warehouse_inner_camera"></div>
-                    <div class="floor_outer_camera"></div>
+                    <div class="mainroom_camera cctv_act" data-url="rtsp://admin:ssstech1969@192.168.0.200/Streaming/Channels/101" title="External Front"></div>
+                    <div class="warehouse_inner_camera cctv_act" data-url="rtsp://admin:ssstech1969@192.168.0.200/Streaming/Channels/201" title="Factory Sout"></div>
+                    <div class="floor_outer_camera cctv_act" data-url="rtsp://admin:ssstech1969@192.168.0.200/Streaming/Channels/401" title="External Front"></div>
                     <div class="floor_outer_tubelight"  outer-tube-light-status="off">
                         <div class="outer_tubelight_button_wrapper">
                             <div class="outer_tubelight_off_button"></div>
@@ -157,33 +157,36 @@
             </div>
         </div>
     </section>
+    <!-- Popup to display live stream video for CCTV -->
     <div id="backgroundPopup"></div>
-    <div class="popup_pos">
+    <!-- <div class="popup_pos"> -->
         <div class="popup_close"></div>
         <!-- <iframe width="920" height="500" src="https://www.youtube.com/embed/Zm_V37O58KI" frameborder="0" allowfullscreen></iframe> -->
-        <div class="vxgplayer"
-        id="vxg_media_player1"
-        width="900"
-        height="500"
-        url=""
-        nmf-src="pnacl/Release/media_player.nmf"
-        nmf-path="media_player.nmf"
-        useragent-prefix="MMP/3.0"
-        latency="10000"
-        autohide="2"
-        volume="0.7"
-        autostart=true
-        avsync
-        mute
-        aspect-ratio
-        aspect-ratio-mode="1"
-        auto-reconnect></div>
-    </div><!-- contact_form_wrapper -->
+        <div class="vxgplayer popup_pos"
+            id="vxg_media_player1"
+            width="900"
+            height="500"
+            url=""
+            nmf-src="pnacl/Release/media_player.nmf"
+            nmf-path="media_player.nmf"
+            useragent-prefix="MMP/3.0"
+            latency="10000"
+            autohide="2"
+            volume="0.7"
+            autostart=true
+            avsync
+            mute
+            aspect-ratio
+            aspect-ratio-mode="1"
+            auto-reconnect></div>
+     <!-- </div> --><!-- contact_form_wrapper -->
 </body>
 <!-- JAVASCRIPT JS  -->
+<script type="text/javascript" src="js/socket.io-1.3.5.js"></script>
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 <script type="text/javascript" src="js/vxgplayer-1.7.44.min.js"></script><!-- include JS-->
 <script type="text/javascript" src="js/new_custom.js"></script>
+<script type="text/javascript" src="js/socket_custom.js"></script>
 
 
 </html>
