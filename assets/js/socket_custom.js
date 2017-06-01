@@ -4,12 +4,20 @@ $(function () {
         // alert("option_act");
         // val = $(this).is(':checked');
         deviceid = $(this).data('deviceid');
+        light_status = $(this).parents('.board_roome_all_lights').attr('light-status');
+        // alert(light_status);
         // alert(deviceid);
-        socket.emit('api_data', { deviceid: deviceid, act:'turnOn',purpose: 'light_on_off' });
+        if(light_status == 'on')
+            status = 'turnOn';
+        else
+            status = 'turnOff';
+        socket.emit('api_data', { deviceid: deviceid, act:status,purpose: 'light_on_off' });
     });
     $('.light_dimmer_act').click(function(){
         deviceid = $(this).data('deviceid');
         dimmer_range = $(this).val();
+        // alert(deviceid);
+        // alert(dimmer_range);
         socket.emit('api_data', { deviceid: deviceid, act:'setValue',range:dimmer_range, purpose: 'light_dimmer' });
     });
     $('.tv_onoff_act').click(function(){
@@ -32,6 +40,15 @@ $(function () {
         deviceid = $(this).parents('.board_room_tv').data('deviceid');
         socket.emit('api_data', { deviceid: deviceid, act:'pressButton',button_id:buttonid, purpose:'tv_control'});
     });
-    
+    $('.it_room_light_act').click(function(){
+        deviceid = $(this).parents('.it_room_light').data('deviceid');
+        status = $(this).parents('.it_room_light').attr('it-light-status');
+        socket.emit('api_data', { deviceid: deviceid, act:status,purpose: 'light_on_off' });
+    });
+    $('.floor_outer_light_act').click(function(){
+        deviceid = $(this).parents('.floor_outer_tubelight').data('deviceid');
+        status = $(this).parents('.floor_outer_tubelight').attr('outer-tube-light-status');
+        socket.emit('api_data', { deviceid: deviceid, act:status,purpose: 'light_on_off' });
+    });
     
 });
