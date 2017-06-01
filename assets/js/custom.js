@@ -1,12 +1,20 @@
-$(document).ready(function(){
+$(document).ready(function(){	
 	function position_popup () {
+		alert("position");
 		// var pop_pos = $(window).scrollTop() + 100;
 		// $('.popup_pos').css('top', pop_pos);
 		var height=$('.popup_pos').height();
 	    var width=$('.popup_pos').width();
 	    $('.popup_pos').css({'margin-top': -height / 2 + "px", 'margin-left': -width / 2 + "px"});
 	}
-
+	if (window.location.hash.substr(1) == "triggerReloadCode") {
+	    window.location.hash = "";
+	    $('.vxgplayer').attr('url',localStorage.getItem("cctv_url"));
+	    // position_popup ();
+   		$('#backgroundPopup').show();
+   		$('.popup_pos,.popup_close').css({'visibility':'visible'});
+	    
+	}
 	$('.material-switch').on('change',function(){
 		var parent_cls = jQuery($(this).data('href'));
 		var child_cls = jQuery('.' + $(this).data('options'));
@@ -98,14 +106,21 @@ $(document).ready(function(){
 
 
 	$('.cctv_act').click(function() {
-		$('#backgroundPopup').show();
-		$('.popup_pos').fadeIn();
-   		position_popup ();
-   		$('.vxgplayer').attr('url',$(this).data('url'));
+		
+		// $('.popup_pos').fadeIn();
+		// $('.popup_close').show();
+		
+   		// position_popup ();
+   		window.location.hash = "triggerReloadCode";
+   		localStorage.setItem("cctv_url", $(this).data('url'));
+		window.location.reload();
+
 	});
 
-	$('.popup_close').click(function() {
-		$(this).parent().fadeOut();
+	$('.popup_close,#backgroundPopup').click(function() {
+		// $(this).parent().fadeOut();
+		$('.popup_close').css({'visibility':'hidden'});
+		$('.popup_pos').css({'visibility':'hidden'});
 		$('#backgroundPopup').hide();
 	});
 
