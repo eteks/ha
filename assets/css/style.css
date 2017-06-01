@@ -624,7 +624,7 @@ left: 43px;
   background: url(../images/acoffon.png);
   height:23px;
   width:23px;
-    cursor: pointer;
+  cursor: pointer;
 }
 .tubelight_onoff{
     background: #f8f8f8 none repeat scroll 0 0;

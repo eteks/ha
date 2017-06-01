@@ -18,11 +18,112 @@
             <div class="main_wrapper">
                 <div class="floor_plan">
                     <img src="images//new_floor.png"/>
-                    <div class="board_room_light1"></div>
-                    <div class="board_room_light2"></div>
-                    <div class="board_room_light3"></div>
-                    <div class="board_room_tv"></div>
-                    <div class="it_room_light"></div>
+                    <div class="board_room_main_wrapper">
+                        <div class="board_room_devices">
+                            <div class="board_roome_all_lights" light-status="off">
+                                <div class="board_room_light1 board_room_light"></div>
+                                <div class="board_room_light2 board_room_light"></div>
+                                <div class="board_room_light3 board_room_light"></div>
+                                <div class="dimmer_wrapper">
+                                    <div class="dimmer_onoff_button_wrapper fl">
+                                        <div class="dimmer_onoff_button"></div>
+                                    </div>
+                                    <div class="dimmer_range fl">
+                                        <div class="dimmer_name">Dimmer</div>
+                                        <div><input type="range" min="0" max="99" step="1" class="dimmer_range light_dimmer_act" data-deviceid="33"></div>
+                                        <div class="sub_range_wrapper">
+                                            <div class="range10 sub_range"></div>
+                                            <div class="range20 sub_range"></div>
+                                            <div class="range30 sub_range"></div>
+                                            <div class="range40 sub_range"></div>
+                                            <div class="range50 sub_range"></div>
+                                            <div class="range60 sub_range"></div>
+                                            <div class="range70 sub_range"></div>
+                                            <div class="range80 sub_range"></div>
+                                            <div class="range90 sub_range"></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="dimmer_off_button_wrapper">
+                                    <div class="dimmer_off_button"></div>
+                                </div>
+                            </div>
+                            <div class="board_room_tv" tv-status="off">
+                                <div class="tv_wrapper">
+                                    <div class="tv_inner_wrapper">
+                                        <div class="tv_onoff_vol_ch">
+                                            <div class="tv_onoff">
+                                                <div class="tv_onoff_text">On/Off</div>
+                                                <div class="tv_onoff_button_wrapper">
+                                                    <div class="tv_onoff_button"></div>
+                                                </div>
+                                            </div>
+                                            <div class="tv_vol">
+                                                <div class="tv_vol_text">Vol : <span class="tv_vol_val" tv-vol-min="0" tv-vol-max="100" current-vol="20" previous-vol="0"></span></div>
+                                                <div class="tv_vol_plus_minus">
+                                                    <div class="tv_vol_plus">+</div><div class="tv_vol_minus">-</div>
+                                                </div>
+                                            </div>
+                                            <div class="tv_ch">
+                                                <div class="tv_ch_text">Ch : <span class="tv_ch_val" current-ch="20"></span></div>
+                                                <div class="tv_ch_plus_minus">
+                                                    <div class="tv_ch_plus">+</div><div class="tv_ch_minus">-</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tv_number_menu_mute">
+                                            <div class="tv_number">
+                                                <div class="tv_number_col1">
+                                                    <div class="tv_number_row1"><div class="tv_press_number" data-val="1">1</div></div>
+                                                    <div class="tv_number_row2"><div class="tv_press_number" data-val="4">4</div></div>
+                                                    <div class="tv_number_row3"><div class="tv_press_number" data-val="7">7</div></div>
+                                                    <div class="tv_number_row4"></div>
+                                                </div>
+                                                <div class="tv_number_col2">
+                                                    <div class="tv_number_row1"><div class="tv_press_number" data-val="2">2</div></div>
+                                                    <div class="tv_number_row2"><div class="tv_press_number" data-val="5">5</div></div>
+                                                    <div class="tv_number_row3"><div class="tv_press_number" data-val="8">8</div></div>
+                                                    <div class="tv_number_row4"><div class="tv_press_number" data-val="0">0</div></div>
+                                                </div>
+                                                <div class="tv_number_col3">
+                                                    <div class="tv_number_row1"><div class="tv_press_number" data-val="3">3</div></div>
+                                                    <div class="tv_number_row2"><div class="tv_press_number" data-val="6">6</div></div>
+                                                    <div class="tv_number_row3"><div class="tv_press_number" data-val="9">9</div></div>
+                                                    <div class="tv_number_row4"></div>
+                                                </div>
+                                            </div>
+                                            <div class="tv_menu_mute">
+                                                <div class="tv_menu_wrapper">
+                                                    <div class="tv_menu_text">Menu</div>
+                                                    <div class="tv_menu_button_wrapper">
+                                                        <div class="tv_menu_button"></div>
+                                                        <div class="tv_menu_button"></div>
+                                                        <div class="tv_menu_button"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tv_mute_wrapper">
+                                                    <div class="tv_mute_text">Mute</div>
+                                                    <div class="tv_mute_button_wrapper">
+                                                        <div class="tv_mute_button"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tv_off_button_wrapper">
+                                    <div class="tv_off_button"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="it_room_light" it-light-status="off">
+                        <div class="it_light_button_wrapper">
+                            <div class="it_light_off_button"></div>
+                        </div>
+                    </div>
                     <div class="it_room_ac"></div>
                     <div class="warehouse_camera"></div>
                     <div class="mainroom_sensor"></div>
