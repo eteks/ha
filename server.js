@@ -4,7 +4,7 @@ var path    = require("path");
 var request = require("request");
 
 app.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/new.html')); //__dirname : It will resolve to your project folder.
+  res.sendFile(path.join(__dirname+'/index.html')); //__dirname : It will resolve to your project folder.
 });
 
 app.use(express.static('assets')); //This folder contains the css and js files
