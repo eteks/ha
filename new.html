@@ -125,11 +125,11 @@
                         </div>
                     </div>
                     <div class="it_room_ac"></div>
-                    <div class="warehouse_camera"></div>
+                    <div class="warehouse_camera cctv_act" data-url="rtsp://admin:ssstech1969@192.168.0.200/Streaming/Channels/301" title="Factory Rear"></div>
                     <div class="mainroom_sensor"></div>
-                    <div class="mainroom_camera"></div>
-                    <div class="warehouse_inner_camera"></div>
-                    <div class="floor_outer_camera"></div>
+                    <div class="mainroom_camera cctv_act" data-url="rtsp://admin:ssstech1969@192.168.0.200/Streaming/Channels/101" title="External Front"></div>
+                    <div class="warehouse_inner_camera cctv_act" data-url="rtsp://admin:ssstech1969@192.168.0.200/Streaming/Channels/201" title="Factory Sout"></div>
+                    <div class="floor_outer_camera cctv_act" data-url="rtsp://admin:ssstech1969@192.168.0.200/Streaming/Channels/401" title="External Front"></div>
                     <div class="floor_outer_tubelight"></div>
                 </div>
             </div>
@@ -137,7 +137,7 @@
     </section>
     <!-- Popup to display live stream video for CCTV -->
     <div id="backgroundPopup"></div>
-    <div class="popup_pos">
+    <!-- <div class="popup_pos"> -->
         <div class="popup_close"></div>
         <!-- <iframe width="920" height="500" src="https://www.youtube.com/embed/Zm_V37O58KI" frameborder="0" allowfullscreen></iframe> -->
         <div class="vxgplayer popup_pos"
@@ -157,7 +157,7 @@
             aspect-ratio
             aspect-ratio-mode="1"
             auto-reconnect></div>
-     </div><!-- contact_form_wrapper -->
+     <!-- </div> --><!-- contact_form_wrapper -->
 </body>
 <!-- JAVASCRIPT JS  -->
 <script type="text/javascript" src="js/socket.io-1.3.5.js"></script>
