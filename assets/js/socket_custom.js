@@ -50,5 +50,28 @@ $(function () {
         status = $(this).parents('.floor_outer_tubelight').attr('outer-tube-light-status');
         socket.emit('api_data', { deviceid: deviceid, act:status,purpose: 'light_on_off' });
     });
+    // $('.ac_on_off_act').click(function(){
+    //     //old_design
+    //     // tv_status = $(this).parents('li').attr('tv-status');
+    //     //new_Design
+    //     ac_status = $(this).parents('.it_room_ac').attr('it-room-ac-status');
+    //     // alert(ac_status);
+    //     if(ac_status == 'on')
+    //         status = 'turnOn';
+    //     else
+    //         status = 'turnOff';
+    //     //old_design
+    //     // deviceid = $(this).parents('li').data('deviceid');
+    //     //new_Design
+    //     deviceid = $(this).parents('.it_room_ac').data('deviceid');
+    //     // alert(status);
+    //     // alert(deviceid);
+    //     socket.emit('api_data', { deviceid: deviceid, act:status, purpose: 'ac_on_off' });
+    // });
+    $('.ac_temp_act').click(function(){
+        temp_val = $(this).parents('.it_room_ac').find('.ac_temp_val').text();
+        deviceid = $(this).parents('.it_room_ac').data('deviceid');
+        socket.emit('api_data', { deviceid: deviceid, act:'setTargetLevel',temp_val:temp_val, purpose:'ac_control'});
+    });
     
 });

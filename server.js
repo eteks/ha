@@ -17,20 +17,22 @@ console.log("Running at Port 3000");
 io.sockets.on('connection', function (socket) {
     socket.on('api_data', function (data) {
     	console.log(data);
+        url='http://192.168.0.18/api/callAction';
     	if(data.purpose == "light_on_off"){
-    		// console.log("if");
-    		url='http://192.168.0.18/api/callAction';
+    		// console.log("if");  		
     		qs = { deviceID: data.deviceid, name: data.act };
     	}
     	else if(data.purpose == "light_dimmer"){
     		// console.log("else if");
-    		url='http://192.168.0.18/api/callAction';
     		qs = { deviceID: data.deviceid, name: data.act, arg1:data.range};
     	}
         else if(data.purpose == "tv_control"){
             // console.log("tv_control");
-            url='http://192.168.0.18/api/callAction';
             qs = { deviceID: data.deviceid, name: data.act, arg1:data.button_id};
+        }
+        else if(data.purpose == "ac_control"){
+            // console.log("tv_control");
+            qs = { deviceID: data.deviceid, name: data.act, arg1:data.temp_val};
         }
         var options = { method: 'GET',
 		url: url,
