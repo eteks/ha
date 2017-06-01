@@ -75,24 +75,26 @@
                                         </div>
                                         <div class="tv_number_menu_mute">
                                             <div class="tv_number">
-                                                <div class="tv_number_col1">
-                                                    <div class="tv_number_row1"><div class="tv_press_number" data-val="1">1</div></div>
-                                                    <div class="tv_number_row2"><div class="tv_press_number" data-val="4">4</div></div>
-                                                    <div class="tv_number_row3"><div class="tv_press_number" data-val="7">7</div></div>
-                                                    <div class="tv_number_row4"></div>
+                                                <div class="tv_number_row1">
+                                                    <div class="tv_number_col1"><div class="tv_press_number" data-val="1">1</div></div>
+                                                    <div class="tv_number_col2"><div class="tv_press_number" data-val="2">2</div></div>
+                                                    <div class="tv_number_col3"><div class="tv_press_number" data-val="3">3</div></div>
                                                 </div>
-                                                <div class="tv_number_col2">
-                                                    <div class="tv_number_row1"><div class="tv_press_number" data-val="2">2</div></div>
-                                                    <div class="tv_number_row2"><div class="tv_press_number" data-val="5">5</div></div>
-                                                    <div class="tv_number_row3"><div class="tv_press_number" data-val="8">8</div></div>
-                                                    <div class="tv_number_row4"><div class="tv_press_number" data-val="0">0</div></div>
+                                                <div class="tv_number_row2">
+                                                    <div class="tv_number_col1"><div class="tv_press_number" data-val="4">4</div></div>
+                                                    <div class="tv_number_col2"><div class="tv_press_number" data-val="5">5</div></div>
+                                                    <div class="tv_number_col3"><div class="tv_press_number" data-val="6">6</div></div>
                                                 </div>
-                                                <div class="tv_number_col3">
-                                                    <div class="tv_number_row1"><div class="tv_press_number" data-val="3">3</div></div>
-                                                    <div class="tv_number_row2"><div class="tv_press_number" data-val="6">6</div></div>
-                                                    <div class="tv_number_row3"><div class="tv_press_number" data-val="9">9</div></div>
-                                                    <div class="tv_number_row4"></div>
+                                                <div class="tv_number_row3">
+                                                    <div class="tv_number_col1"><div class="tv_press_number" data-val="7">7</div></div>
+                                                    <div class="tv_number_col2"><div class="tv_press_number" data-val="8">8</div></div>
+                                                    <div class="tv_number_col3"><div class="tv_press_number" data-val="9">9</div></div>
                                                 </div>
+                                                <div class="tv_number_row4">
+                                                    <div class="tv_number_col4"><div class="tv_press_number" data-val="0">0</div></div>
+                                                    <div class="tv_number_merged_two_col"><span class="tv_source">Source</span></div>
+                                                </div>
+
                                             </div>
                                             <div class="tv_menu_mute">
                                                 <div class="tv_menu_wrapper">
@@ -124,13 +126,33 @@
                             <div class="it_light_off_button"></div>
                         </div>
                     </div>
-                    <div class="it_room_ac"></div>
+                    <div class="it_room_ac" it-room-ac-status="off">
+                        <div class="ac_wrapper">
+                            <div class="ac_temp_wrapper">
+                                <div class="ac_temp_text">Temp :<span class="ac_temp_val" ac-min="16" ac-max="25" current-temp="20"></span></div>
+                                <div class="ac_temp_plus_minus">
+                                    <div class="ac_temp_plus">+</div><div class="ac_temp_minus">-</div>
+                                </div>
+                            </div>
+                            <div class="ac_onoff_wrapper">
+                                <div class="ac_onoff_text">On/Off</div>
+                                <div class="ac_onoff_button_wrapper"><div class="ac_onoff_button"></div></div>
+                            </div>
+                        </div>
+                        <div class="it_room_ac_off_button_wrapper">
+                            <div class="it_room_ac_off_button"></div>
+                        </div>
+                    </div>
                     <div class="warehouse_camera"></div>
                     <div class="mainroom_sensor"></div>
                     <div class="mainroom_camera"></div>
                     <div class="warehouse_inner_camera"></div>
                     <div class="floor_outer_camera"></div>
-                    <div class="floor_outer_tubelight"></div>
+                    <div class="floor_outer_tubelight"  outer-tube-light-status="off">
+                        <div class="outer_tubelight_button_wrapper">
+                            <div class="outer_tubelight_off_button"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -10,7 +10,31 @@ $(document).ready(function(){
         $(this).parent().fadeOut();
         $('#backgroundPopup').hide();
     });
+    if (window.location.hash.substr(1) == "triggerReloadCode") {
+	    window.location.hash = "";
+	    $('.vxgplayer').attr('url',localStorage.getItem("cctv_url"));
+	    // position_popup ();
+   		$('#backgroundPopup').show();
+   		$('.popup_pos,.popup_close').css({'visibility':'visible'});
 
+	}
+    $('.cctv_act').click(function() {
+
+        // $('.popup_pos').fadeIn();
+        // $('.popup_close').show();
+
+        // position_popup ();
+        window.location.hash = "triggerReloadCode";
+        localStorage.setItem("cctv_url", $(this).data('url'));
+        window.location.reload();
+
+    });
+    $('.popup_close,#backgroundPopup').click(function() {
+        // $(this).parent().fadeOut();
+        $('.popup_close').css({'visibility':'hidden'});
+        $('.popup_pos').css({'visibility':'hidden'});
+        $('#backgroundPopup').hide();
+    });
     // black screen dynamic height on window resize
     $(window).resize(function(){
        //positioning background
@@ -160,6 +184,16 @@ $(document).ready(function(){
     	}
     });
 
+    // it room light controll
+    var it_light_status = $('.it_room_light').attr('it-light-status');
+    if(it_light_status == 'off'){
+        $('.it_light_off_button').css('background-image', 'url("../images/acoffon.png")');
+        $('.it_room_light').css('background-image', 'url("../images/new_light_off.png")');
+    }
+    else{
+        $('.it_light_off_button').css('background-image', 'url("../images/aconoff.png")');
+        $('.it_room_light').css('background-image', 'url("../images/new_light_on.png")');
+    }
     $('.it_light_off_button').on('click',function(){
         var it_light_status = $('.it_room_light').attr('it-light-status');
         if(it_light_status == 'off'){
@@ -171,6 +205,79 @@ $(document).ready(function(){
             $('.it_light_off_button').css('background-image', 'url("../images/acoffon.png")');
             $('.it_room_light').attr('it-light-status','off');
             $('.it_room_light').css('background-image', 'url("../images/new_light_off.png")');
+        }
+    });
+
+
+    // it room ac controll
+    var ac_status = $('.it_room_ac').attr('it-room-ac-status');
+    if(ac_status == 'off'){
+        $('.ac_wrapper').hide();
+        $('.it_room_ac_off_button_wrapper').show();
+        $('.it_room_ac').css('background', 'url("../images/new_ac_off.png") no-repeat');
+    }
+    else{
+        $('.ac_wrapper').show();
+        $('.it_room_ac_off_button_wrapper').hide();
+        $('.it_room_ac').css('background', 'url("../images/new_ac_on.png") no-repeat');
+    }
+    $('.it_room_ac_off_button').on('click',function(){
+        $('.ac_wrapper').show();
+        $('.it_room_ac_off_button_wrapper').hide();
+        $('.it_room_ac').css('background', 'url("../images/new_ac_on.png") no-repeat');
+    });
+    $('.ac_onoff_button').on('click',function(){
+        $('.ac_wrapper').hide();
+        $('.it_room_ac_off_button_wrapper').show();
+        $('.it_room_ac').css('background', 'url("../images/new_ac_off.png") no-repeat');
+    });
+    $('.ac_temp_val').text($('.ac_temp_val').attr('current-temp'));
+    $('.ac_temp_plus').on('click',function(){
+    	var current_temp = parseInt($('.ac_temp_val').attr('current-temp'))+1;
+    	var maximum_temp = parseInt($('.ac_temp_val').attr('ac-max'));
+    	var minimum_temp = parseInt($('.ac_temp_val').attr('ac-min'));
+    	if(current_temp >= minimum_temp && current_temp <= maximum_temp){
+    		$('.ac_temp_val').attr('current-temp',current_temp);
+    		$('.ac_temp_val').text(current_temp);
+    	}
+    	else{
+    		alert('You cannot set temparature at above '+maximum_temp);
+    	}
+    });
+    $('.ac_temp_minus').on('click',function(){
+    	var current_temp = parseInt($('.ac_temp_val').attr('current-temp'))-1;
+    	var maximum_temp = parseInt($('.ac_temp_val').attr('ac-max'));
+    	var minimum_temp = parseInt($('.ac_temp_val').attr('ac-min'));
+    	if(current_temp >= minimum_temp && current_temp <= maximum_temp){
+    		$('.ac_temp_val').attr('current-temp',current_temp);
+    		$('.ac_temp_val').text(current_temp);
+    	}
+    	else{
+    		alert('You cannot set temparature at below' +minimum_temp);
+    	}
+    });
+
+    //outer tube light controll
+    var outer_light_status = $('.floor_outer_tubelight').attr('outer-tube-light-status');
+    if(outer_light_status == 'off'){
+        $('.outer_tubelight_off_button').css('background-image', 'url("../images/acoffon.png")');
+        $('.floor_outer_tubelight').css('background-image', 'url("../images/new_tube_light_off.png")');
+    }
+    else{
+        $('.outer_tubelight_off_button').css('background-image', 'url("../images/aconoff.png")');
+        $('.floor_outer_tubelight').css('background-image', 'url("../images/new_tube_light_on.png")');
+    }
+    $('.outer_tubelight_off_button').on('click',function(){
+        var outer_light_status = $('.floor_outer_tubelight').attr('outer-tube-light-status');
+        if(outer_light_status == 'off'){
+            $('.outer_tubelight_off_button').css('background-image', 'url("../images/aconoff.png")');
+            $('.floor_outer_tubelight').attr('outer-tube-light-status','on');
+            $('.floor_outer_tubelight').css('background-image', 'url("../images/new_tube_light_on.png")');
+        }
+        else{
+            $('.outer_tubelight_off_button').css('background-image', 'url("../images/acoffon.png")');
+            $('.floor_outer_tubelight').attr('outer-tube-light-status','off');
+            $('.floor_outer_tubelight').css('background-image', 'url("../images/new_tube_light_off.png")');
         }
     });
 });

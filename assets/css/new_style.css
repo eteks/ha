@@ -187,7 +187,7 @@ input[type=range]:focus::-ms-fill-upper {
 .board_roome_all_lights:hover .dimmer_wrapper,.board_roome_all_lights:hover .dimmer_off_button_wrapper{
     visibility: visible;
 }
-.dimmer_off_button,.tv_off_button,.it_light_off_button{
+.dimmer_off_button,.tv_off_button,.it_light_off_button,.it_room_ac_off_button,.outer_tubelight_off_button{
     background: url(../images/acoffon.png) no-repeat;
     height: 23px;
     width: 23px;
@@ -333,14 +333,27 @@ input[type=range]:focus::-ms-fill-upper {
   width: 100%;
   margin:0px 5px;
 }
-.tv_number_col1,.tv_number_col2,.tv_number_col3{
-  width:33.33%;
+.tv_number_row1,.tv_number_row2,.tv_number_row3,.tv_number_row4{
+  width:100%;
+  height:25%;
+}
+.tv_number_col1,.tv_number_col2,.tv_number_col3,.tv_number_col4{
   height:100%;
+  width:33.33%;
   float: left;
 }
-.tv_number_row1,.tv_number_row2,.tv_number_row3,.tv_number_row4{
-  height:25%;
-  width:100%;
+.tv_number_merged_two_col{
+    height:100%;
+    width:59.66%;
+    float: left;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 6px;
+    font-size: 11px;
+    padding-top: 4px;
+}
+.board_room_tv{
+    font-family: gotham;
 }
 .tv_press_number {
     border: 1px solid #9f9f9f;
@@ -390,13 +403,13 @@ input[type=range]:focus::-ms-fill-upper {
 .it_room_light{
     position: absolute;
     background: url(../images/new_light_off.png) no-repeat;
-    height: 50px;
+    height: 33px;
     width: 25px;
     top: 51px;
     left: 202px;
     cursor: pointer;
 }
-.it_light_button_wrapper{
+.it_light_button_wrapper,.outer_tubelight_button_wrapper{
     background: #f8f8f8 none repeat scroll 0 0;
     height: 48px;
     left: -16px;
@@ -418,6 +431,67 @@ input[type=range]:focus::-ms-fill-upper {
     top: 117px;
     left: 188px;
     cursor: pointer;
+}
+.ac_wrapper{
+    background: #f8f8f8 none repeat scroll 0 0;
+    height: 70px;
+    left: -36px;
+    position: absolute;
+    top: -70px;
+    width: 143px;
+    visibility: hidden;
+    border: 1px #f1f1f1 solid;
+}
+.it_room_ac:hover .ac_wrapper, .it_room_ac:hover .it_room_ac_off_button_wrapper{
+  visibility: visible;
+}
+.ac_temp_wrapper,.ac_onoff_wrapper {
+    float: left;
+    height: 100%;
+    width: 50%;
+    padding: 12px 3px 17px 13px;
+}
+.ac_onoff_wrapper {
+    float: left;
+    height: 100%;
+    width: 70px;
+}
+.ac_temp_text {
+    font-size: 13px;
+}
+.ac_temp_plus,.ac_temp_minus {
+    float: left;
+    line-height:8px;
+  padding:5px 9px;
+  cursor:pointer;
+}
+.ac_temp_plus_minus {
+    border: 1px solid #000;
+    height: 50%;
+    width: 100%;
+}
+.ac_temp_plus {
+    border-right: 1px solid #000;
+}
+.ac_onoff_button{
+  background: url(../images/aconoff.png);
+  height:23px;
+  width:23px;
+}
+.ac_onoff_button_wrapper {
+    padding-left: 10px;
+    cursor:pointer;
+}
+.it_room_ac_off_button_wrapper{
+    background: #f8f8f8 none repeat scroll 0 0;
+    height: 48px;
+    left: -13px;
+    position: absolute;
+    top: -48px;
+    width: auto;
+    visibility: hidden;
+    padding: 10px 15px 12px;
+    border: 1px #f1f1f1 solid;
 }
 .warehouse_camera{
     position: absolute;
@@ -466,9 +540,12 @@ input[type=range]:focus::-ms-fill-upper {
 .floor_outer_tubelight{
     position: absolute;
     background: url(../images/new_tube_light_off.png) no-repeat;
-    height: 13px;
+    height: 26px;
     width: 43px;
     top: 411px;
     left: 123px;
     cursor: pointer;
+}
+.floor_outer_tubelight:hover .outer_tubelight_button_wrapper{
+    visibility: visible;
 }

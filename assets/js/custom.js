@@ -1,4 +1,4 @@
-$(document).ready(function(){	
+$(document).ready(function(){
 	function position_popup () {
 		alert("position");
 		// var pop_pos = $(window).scrollTop() + 100;
@@ -13,7 +13,7 @@ $(document).ready(function(){
 	    // position_popup ();
    		$('#backgroundPopup').show();
    		$('.popup_pos,.popup_close').css({'visibility':'visible'});
-	    
+
 	}
 	$('.material-switch').on('change',function(){
 		var parent_cls = jQuery($(this).data('href'));
@@ -106,10 +106,10 @@ $(document).ready(function(){
 
 
 	$('.cctv_act').click(function() {
-		
+
 		// $('.popup_pos').fadeIn();
 		// $('.popup_close').show();
-		
+
    		// position_popup ();
    		window.location.hash = "triggerReloadCode";
    		localStorage.setItem("cctv_url", $(this).data('url'));
