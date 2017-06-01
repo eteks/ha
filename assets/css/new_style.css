@@ -6,6 +6,94 @@
        url('../fonts/gotham-medium-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('../fonts/gotham-medium-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
+.fl{
+    float: left;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 4.5px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background: rgba(216, 216, 216, 0.78);
+  border-radius: 0px;
+  border: 0px solid rgba(0, 0, 0, 0);
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 13px;
+  width: 13px;
+  border-radius: 6.5px;
+  background: #23cf5f;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(226, 226, 226, 0.78);
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background: rgba(216, 216, 216, 0.78);
+  border-radius: 0px;
+  border: 0px solid rgba(0, 0, 0, 0);
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 13px;
+  width: 13px;
+  border-radius: 6.5px;
+  background: #23cf5f;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: rgba(206, 206, 206, 0.78);
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+input[type=range]::-ms-fill-upper {
+  background: rgba(216, 216, 216, 0.78);
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 13px;
+  width: 13px;
+  border-radius: 6.5px;
+  background: #23cf5f;
+  cursor: pointer;
+  height: 4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(216, 216, 216, 0.78);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: rgba(226, 226, 226, 0.78);
+}
 #backgroundPopup {
   display:none;
   position:absolute;
@@ -44,41 +132,260 @@
     top: 50%;
     left: 50%;
 }
-.board_room_light1{
+.board_room_main_wrapper{
     position: absolute;
-    background: url(../images/new_light_on.png) no-repeat;
+    top: 0px;
+    left: 0px;
+}
+.board_room_devices{
+    position: relative;
+}
+.board_roome_all_lights{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    width: 125px;
+    cursor: pointer;
+}
+.board_room_light1{
     height: 31px;
     width: 25px;
-    top: 51px;
-    left: 25px;
-    cursor: pointer;
+    float: left;
+    margin-right: 25px;
 }
 .board_room_light2{
-    position: absolute;
-    background: url(../images/new_light_on.png) no-repeat;
     height: 31px;
     width: 25px;
-    top: 51px;
-    left: 76px;
-    cursor: pointer;
+    float: left;
+    margin-right: 25px;
 }
 .board_room_light3{
-    position: absolute;
-    background: url(../images/new_light_on.png) no-repeat;
     height: 31px;
     width: 25px;
-    top: 51px;
-    left: 126px;
-    cursor: pointer;
+    float: left;
 }
+
 .board_room_tv{
     position: absolute;
-    background: url(../images/new_tv_off.png) no-repeat;
     height: 50px;
     width: 16px;
     top: 44px;
     left: 165px;
     cursor: pointer;
+}
+.dimmer_wrapper {
+    background: #f8f8f8 none repeat scroll 0 0;
+    height: 70px;
+    left: -70px;
+    position: absolute;
+    top: -70px;
+    width: auto;
+    visibility: hidden;
+    padding: 10px 15px 12px;
+    border: 1px #f1f1f1 solid;
+}
+.board_roome_all_lights:hover .dimmer_wrapper,.board_roome_all_lights:hover .dimmer_off_button_wrapper{
+    visibility: visible;
+}
+.dimmer_off_button,.tv_off_button,.it_light_off_button{
+    background: url(../images/acoffon.png) no-repeat;
+    height: 23px;
+    width: 23px;
+    cursor: pointer;
+}
+.dimmer_off_button_wrapper{
+    background: #f8f8f8 none repeat scroll 0 0;
+    height: 48px;
+    left: 31px;
+    position: absolute;
+    top: -49px;
+    width: auto;
+    visibility: hidden;
+    padding: 10px 15px 12px;
+    border: 1px #f1f1f1 solid;
+}
+.dimmer_name{
+  line-height:8px;
+  font-family:gotham;
+}
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+  .dimmer_range > div {
+    margin-bottom: 10px;
+  }
+}
+.sub_range {
+    background: #d8d8d8 none repeat scroll 0 0;
+    float: left;
+    height: 10px;
+    margin-right: 6px;
+    width: 4px;
+    border-radius:5px;
+}
+.range_active {
+    background: #23cf5f none repeat scroll 0 0;
+}
+.dimmer_onoff_button,.tubelight_onoff_button{
+  background: url(../images/aconoff.png);
+  height:23px;
+  width:23px;
+  cursor: pointer;
+}
+.dimmer_onoff_button_wrapper{
+    margin: 10px 11px 0px 0px;
+}
+.tv_wrapper{
+    background: #f8f8f8 none repeat scroll 0 0;
+    height: 165px;
+    left: -34px;
+    position: absolute;
+    top: -177px;
+    width: 165px;
+    visibility: hidden;
+    border: 1px #f1f1f1 solid;
+}
+.board_room_tv:hover .tv_wrapper,.board_room_tv:hover .tv_off_button_wrapper{
+  visibility: visible;
+}
+.tv_wrapper:after{
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid #f8f8f8;
+    content: "";
+    left: 28px;
+    position: absolute;
+    top: 100%;
+}
+.tv_inner_wrapper {
+    height: 146px;
+    margin: 8px 12px 9px 14px;
+    width: 137px;
+}
+.tv_onoff_vol_ch{
+  height:100%;
+  width: 40%;
+  float:left;
+}
+.tv_number_menu_mute{
+  height:100%;
+  width: 60%;
+  float:left;
+}
+.tv_onoff,.tv_vol,.tv_ch{
+  width:100%;
+  height: 33.33%;
+}
+.tv_onoff_button_wrapper {
+    padding-left: 10px;
+    cursor:pointer;
+}
+.tv_onoff_text{
+  font-family:gotham;
+  font-size:13px;
+}
+.tv_onoff_button{
+  background: url(../images/aconoff.png);
+  height:23px;
+  width:23px;
+}
+.tv_vol_text {
+    font-size: 13px;
+    font-family:gotham;
+}
+.tv_vol_plus,.tv_vol_minus {
+    float: left;
+    line-height:8px;
+  padding:7px 9px;
+  cursor:pointer;
+}
+.tv_vol_plus_minus {
+    border: 1px solid #000;
+    height: 50%;
+    width: 100%;
+}
+.tv_vol_plus {
+    border-right: 1px solid #000;
+}
+.tv_ch_text {
+    font-size: 13px;
+    font-family:gotham;
+}
+.tv_ch_plus,.tv_ch_minus {
+    float: left;
+    line-height:8px;
+  padding:7px 9px;
+  cursor:pointer;
+}
+.tv_ch_plus_minus {
+    border: 1px solid #000;
+    height: 50%;
+    width: 100%;
+}
+.tv_ch_plus {
+    border-right: 1px solid #000;
+}
+.tv_number{
+  height:66.66%;
+  width: 100%;
+  margin:0px 5px;
+}
+.tv_menu_mute{
+  height:33.33%;
+  width: 100%;
+  margin:0px 5px;
+}
+.tv_number_col1,.tv_number_col2,.tv_number_col3{
+  width:33.33%;
+  height:100%;
+  float: left;
+}
+.tv_number_row1,.tv_number_row2,.tv_number_row3,.tv_number_row4{
+  height:25%;
+  width:100%;
+}
+.tv_press_number {
+    border: 1px solid #9f9f9f;
+    border-radius: 21px;
+    text-align: center;
+    cursor: pointer;
+    height:22px;
+    width:22px;
+}
+.tv_menu_wrapper,.tv_mute_wrapper{
+  width: 50%;
+  float: left;
+}
+.tv_menu_button{
+  background: url(../images/tv_menu_bar.png);
+  height:3px;
+  width:28px;
+  text-align:center;
+  margin-bottom:3px;
+}
+.tv_menu_text,.tv_mute_text{
+  font-family: gotham;
+  font-size:13px;
+}
+.tv_menu_button_wrapper,.tv_mute_button_wrapper {
+    margin: 5px 0 0 0px;
+    cursor: pointer;
+}
+.tv_mute_button{
+  background: rgba(0, 0, 0, 0) url("../images/tv_mute_off.png") no-repeat scroll 0 0;
+    height: 18px;
+    margin-bottom: 3px;
+    text-align: center;
+    width: 16px;
+}
+.tv_off_button_wrapper{
+    background: #f8f8f8 none repeat scroll 0 0;
+    height: 48px;
+    left: 0px;
+    position: absolute;
+    top: -47px;
+    width: auto;
+    visibility: hidden;
+    padding: 10px 15px 12px;
+    border: 1px #f1f1f1 solid;
 }
 .it_room_light{
     position: absolute;
@@ -88,6 +395,20 @@
     top: 51px;
     left: 202px;
     cursor: pointer;
+}
+.it_light_button_wrapper{
+    background: #f8f8f8 none repeat scroll 0 0;
+    height: 48px;
+    left: -16px;
+    position: absolute;
+    top: -47px;
+    width: auto;
+    visibility: hidden;
+    padding: 10px 15px 12px;
+    border: 1px #f1f1f1 solid;
+}
+.it_room_light:hover .it_light_button_wrapper{
+    visibility: visible;
 }
 .it_room_ac{
     position: absolute;
