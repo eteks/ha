@@ -12,8 +12,7 @@ $(document).ready(function(){
 	    $('.vxgplayer').attr('url',localStorage.getItem("cctv_url"));
 	    // position_popup ();
    		$('#backgroundPopup').show();
-   		$('.popup_pos,.popup_close').css({'visibility':'visible'});
-	    
+   		$('.popup_pos,.popup_close').css({'visibility':'visible'});	    
 	}
 	$('.material-switch').on('change',function(){
 		var parent_cls = jQuery($(this).data('href'));
