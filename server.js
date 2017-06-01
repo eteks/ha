@@ -4,7 +4,7 @@ var path    = require("path");
 var request = require("request");
 
 app.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/index.html')); //__dirname : It will resolve to your project folder.
+  res.sendFile(path.join(__dirname+'/new.html')); //__dirname : It will resolve to your project folder.
 });
 
 app.use(express.static('assets')); //This folder contains the css and js files
@@ -27,8 +27,8 @@ io.sockets.on('connection', function (socket) {
     		url='http://192.168.0.18/api/callAction';
     		qs = { deviceID: data.deviceid, name: data.act, arg1:data.range};
     	}
-        else if(data.purpose == "tv_on_off"){
-            console.log("tv_on_off");
+        else if(data.purpose == "tv_control"){
+            console.log("tv_control");
             url='http://192.168.0.18/api/callAction';
             qs = { deviceID: data.deviceid, name: data.act, arg1:data.button_id};
         }
@@ -42,9 +42,9 @@ io.sockets.on('connection', function (socket) {
         // console.log(options); 
 		request(options, function (error, response, body) {
 		  if (error) throw new Error(error);
-          console.log(response);
+          // console.log(response);
 		  // console.log(body);
 		});
     });
-	console.log("User Connected");
+	// console.log("User Connected");
 });
