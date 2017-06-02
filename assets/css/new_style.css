@@ -184,9 +184,9 @@ html, body {
 .dimmer_wrapper {
     background: #f8f8f8 none repeat scroll 0 0;
     height: 70px;
-    left: -70px;
+    left: -83px;
     position: absolute;
-    top: -70px;
+    top: -82px;
     width: auto;
     visibility: hidden;
     padding: 10px 15px 12px;
@@ -204,9 +204,9 @@ html, body {
 .dimmer_off_button_wrapper{
     background: #f8f8f8 none repeat scroll 0 0;
     height: 48px;
-    left: 31px;
+    left: 34px;
     position: absolute;
-    top: -49px;
+    top: -59px;
     width: auto;
     visibility: hidden;
     padding: 10px 15px 12px;
@@ -243,28 +243,70 @@ html, body {
 }
 .tv_wrapper{
     background: #f8f8f8 none repeat scroll 0 0;
-    height: 165px;
-    left: -34px;
+    height: 256px;
+    left: 25px;
     position: absolute;
-    top: -177px;
+    top: -40px;
     width: 165px;
     visibility: hidden;
     border: 1px #f1f1f1 solid;
+    z-index: 1;
 }
 .board_room_tv:hover .tv_wrapper,.board_room_tv:hover .tv_off_button_wrapper{
   visibility: visible;
 }
 .tv_wrapper:after{
+    content: '';
+	display: block;
+	position: absolute;
+	right: 100%;
+	top: 24%;
+	margin-top: -10px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 10px solid #f8f8f8;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid transparent;
+}
+.dimmer_off_button_wrapper:after,.it_light_button_wrapper:after,.it_room_ac_off_button_wrapper:after{
     border-left: 13px solid transparent;
     border-right: 13px solid transparent;
     border-top: 13px solid #f8f8f8;
     content: "";
-    left: 28px;
+    left: 14px;
+    position: absolute;
+    top: 100%;
+}
+.outer_tubelight_button_wrapper:after{
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid #f8f8f8;
+    content: "";
+    left: 14px;
+    position: absolute;
+    top: 100%;
+}
+.tv_off_button_wrapper:after{
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid #f8f8f8;
+    content: "";
+    left: 14px;
+    position: absolute;
+    top: 100%;
+}
+.dimmer_wrapper:after{
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid #f8f8f8;
+    content: "";
+    left: 130px;
     position: absolute;
     top: 100%;
 }
 .tv_inner_wrapper {
-    height: 146px;
+    height: 236px;
     margin: 8px 12px 9px 14px;
     width: 137px;
 }
@@ -278,9 +320,9 @@ html, body {
   width: 60%;
   float:left;
 }
-.tv_onoff,.tv_vol,.tv_ch{
+.tv_onoff,.tv_vol,.tv_ch,.tv_menu_wrapper,.tv_mute_wrapper{
   width:100%;
-  height: 33.33%;
+  height: 20%;
 }
 .tv_onoff_button_wrapper {
     padding-left: 10px;
@@ -332,7 +374,7 @@ html, body {
     border-right: 1px solid #000;
 }
 .tv_number{
-  height:66.66%;
+  height:60%;
   width: 100%;
   margin:0px 5px;
 }
@@ -341,9 +383,9 @@ html, body {
   width: 100%;
   margin:0px 5px;
 }
-.tv_number_row1,.tv_number_row2,.tv_number_row3,.tv_number_row4{
+.tv_number_row1,.tv_number_row2,.tv_number_row3,.tv_number_row4.tv_number_row5{
   width:100%;
-  height:25%;
+  height:20%;
 }
 .tv_number_col1,.tv_number_col2,.tv_number_col3,.tv_number_col4{
   height:100%;
@@ -363,6 +405,16 @@ html, body {
 .board_room_tv{
     font-family: gotham;
 }
+.zero_button{
+    margin-left: 33.33%;
+}
+.tv_source_btn{
+    text-align: center;
+    border: 1px solid;
+    margin: 6px 0px 0px 0px;
+    border-radius: 5px;
+    width: 93%;
+}
 .tv_press_number {
     border: 1px solid #9f9f9f;
     border-radius: 21px;
@@ -373,7 +425,6 @@ html, body {
 }
 .tv_menu_wrapper,.tv_mute_wrapper{
   width: 50%;
-  float: left;
 }
 .tv_menu_button{
   background: url(../images/tv_menu_bar.png);
@@ -400,9 +451,9 @@ html, body {
 .tv_off_button_wrapper{
     background: #f8f8f8 none repeat scroll 0 0;
     height: 48px;
-    left: 0px;
+    left: -17px;
     position: absolute;
-    top: -47px;
+    top: -60px;
     width: auto;
     visibility: hidden;
     padding: 10px 15px 12px;
@@ -422,7 +473,7 @@ html, body {
     height: 48px;
     left: -16px;
     position: absolute;
-    top: -47px;
+    top: -59px;
     width: auto;
     visibility: hidden;
     padding: 10px 15px 12px;
@@ -442,44 +493,38 @@ html, body {
 }
 .ac_wrapper{
     background: #f8f8f8 none repeat scroll 0 0;
-    height: 70px;
-    left: -36px;
+    height: 246px;
+    left: 40px;
     position: absolute;
-    top: -70px;
+    top: -78px;
     width: 143px;
     visibility: hidden;
     border: 1px #f1f1f1 solid;
+    z-index: 1;
+    padding: 10px;
 }
 .it_room_ac:hover .ac_wrapper, .it_room_ac:hover .it_room_ac_off_button_wrapper{
   visibility: visible;
 }
 .ac_temp_wrapper,.ac_onoff_wrapper {
     float: left;
-    height: 100%;
+    height: 25%;
     width: 50%;
-    padding: 12px 3px 17px 13px;
 }
-.ac_onoff_wrapper {
+/*.ac_onoff_wrapper {
     float: left;
     height: 100%;
     width: 70px;
-}
+}*/
 .ac_temp_text {
     font-size: 13px;
 }
 .ac_temp_plus,.ac_temp_minus {
     float: left;
     line-height:8px;
-  padding:5px 9px;
-  cursor:pointer;
-}
-.ac_temp_plus_minus {
-    border: 1px solid #000;
-    height: 50%;
-    width: 100%;
-}
-.ac_temp_plus {
-    border-right: 1px solid #000;
+    padding:8px 9px;
+    cursor:pointer;
+    border: 1px solid;
 }
 .ac_onoff_button{
   background: url(../images/aconoff.png);
@@ -495,7 +540,7 @@ html, body {
     height: 48px;
     left: -13px;
     position: absolute;
-    top: -48px;
+    top: -56px;
     width: auto;
     visibility: hidden;
     padding: 10px 15px 12px;
@@ -556,4 +601,85 @@ html, body {
 }
 .floor_outer_tubelight:hover .outer_tubelight_button_wrapper{
     visibility: visible;
+}
+.tv_navigation_wrapper{
+    height: 40%;
+    width: 100%;
+    text-align: center;
+}
+.nav_row1,.nav_row2,.nav_row3{
+    width: 100%;
+    height: 33.33%;
+}
+.nav_col1,.nav_col2,.nav_col3{
+    width: 33.33%;
+    height: 100%;
+    float: left;
+}
+.viewable_arrow{
+    border: 1px solid;
+    border-radius: 5px;
+}
+.top_arrow{
+    border-radius: 5px 5px 0px 0px;
+}
+.left_arrow{
+    border-radius: 5px 0px 0px 5px;
+}
+.right_arrow{
+    border-radius: 0px 5px 5px 0px;
+}
+.down_arrow{
+    border-radius: 0px 0px 5px 5px;
+}
+.ac_temp_on_off,.fan_mode_section,.ser_mode_section,.ser_point_section{
+    padding: 2.5% 0%;
+}
+.custom_btn_primary{
+    color: #8a8a8a;
+    background-color: #fff;
+    border-color: #8a8a8a;
+}
+.custom_btn{
+    display: inline-block;
+    padding: 5px 5px;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 100%;
+}
+.fan_mode_section,.ser_mode_section,.ser_point_section{
+    height: 25%;
+}
+.dropdown-menu{
+    min-width: 0px!important;
+    width: 100% !important;
+}
+.ac_wrapper:after{
+    content: '';
+	display: block;
+	position: absolute;
+	right: 100%;
+	top: 39%;
+	margin-top: -10px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 10px solid #f8f8f8;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid transparent;
+}
+.dimmer_off_button_wrapper,.dimmer_wrapper,.tv_off_button_wrapper,.tv_wrapper,.ac_wrapper,.it_room_ac_off_button_wrapper,.it_light_button_wrapper,.outer_tubelight_button_wrapper{
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }

@@ -72,6 +72,20 @@
                                                     <div class="tv_ch_plus tv_control_act" data-buttonid="Button23">+</div><div class="tv_ch_minus tv_control_act" data-buttonid="Button24">-</div>
                                                 </div>
                                             </div>
+                                            <div class="tv_menu_wrapper">
+                                                <div class="tv_menu_text">Menu</div>
+                                                <div class="tv_menu_button_wrapper tv_control_act" data-buttonid="Button52">
+                                                    <div class="tv_menu_button"></div>
+                                                    <div class="tv_menu_button"></div>
+                                                    <div class="tv_menu_button"></div>
+                                                </div>
+                                            </div>
+                                            <div class="tv_mute_wrapper">
+                                                <div class="tv_mute_text">Mute</div>
+                                                <div class="tv_mute_button_wrapper tv_control_act" data-buttonid="Button51">
+                                                    <div class="tv_mute_button"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="tv_number_menu_mute">
                                             <div class="tv_number">
@@ -91,25 +105,30 @@
                                                     <div class="tv_number_col3"><div class="tv_press_number tv_control_act" data-buttonid="Button44" data-val="9">9</div></div>
                                                 </div>
                                                 <div class="tv_number_row4">
-                                                    <div class="tv_number_col4"><div class="tv_press_number tv_control_act" data-buttonid="Button45" data-val="0">0</div></div>
-                                                    <div class="tv_number_merged_two_col"><span class="tv_source tv_control_act" data-buttonid="Button53">Source</span></div>
+                                                    <div class="tv_number_col1"><div></div></div>
+                                                    <div class="tv_number_col2 zero_button"><div class="tv_press_number tv_control_act" data-buttonid="Button45" data-val="0">0</div></div>
+                                                    <div class="tv_number_col3"><div></div></div>
                                                 </div>
-
+                                                <div class="clearfix"></div>
+                                                <div class="tv_number_row5">
+                                                    <div class="tv_source_btn"><span class="tv_source tv_control_act" data-buttonid="Button53">Source</span></div>
+                                                </div>
                                             </div>
-                                            <div class="tv_menu_mute">
-                                                <div class="tv_menu_wrapper">
-                                                    <div class="tv_menu_text">Menu</div>
-                                                    <div class="tv_menu_button_wrapper tv_control_act" data-buttonid="Button52">
-                                                        <div class="tv_menu_button"></div>
-                                                        <div class="tv_menu_button"></div>
-                                                        <div class="tv_menu_button"></div>
-                                                    </div>
+                                            <div class="tv_navigation_wrapper">
+                                                <div class="nav_row1">
+                                                    <div class="nav_col1"> </div>
+                                                    <div class="nav_col2 viewable_arrow top_arrow">&uarr;</div>
+                                                    <div class="nav_col3"> </div>
                                                 </div>
-                                                <div class="tv_mute_wrapper">
-                                                    <div class="tv_mute_text">Mute</div>
-                                                    <div class="tv_mute_button_wrapper tv_control_act" data-buttonid="Button51">
-                                                        <div class="tv_mute_button"></div>
-                                                    </div>
+                                                <div class="nav_row2">
+                                                    <div class="nav_col1 viewable_arrow left_arrow">&larr;</div>
+                                                    <div class="nav_col2"> </div>
+                                                    <div class="nav_col3 viewable_arrow right_arrow">&rarr;</div>
+                                                </div>
+                                                <div class="nav_row3">
+                                                    <div class="nav_col1"> </div>
+                                                    <div class="nav_col2 viewable_arrow down_arrow">&darr;</div>
+                                                    <div class="nav_col3"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -128,15 +147,54 @@
                     </div>
                     <div class="it_room_ac" it-room-ac-status="off" data-deviceid="11" title="IT Room AC">
                         <div class="ac_wrapper">
-                            <div class="ac_temp_wrapper">
-                                <div class="ac_temp_text">Temp :<span class="ac_temp_val" ac-min="16" ac-max="25" current-temp="20"></span></div>
-                                <div class="ac_temp_plus_minus">
-                                    <div class="ac_temp_plus ac_temp_act">+</div><div class="ac_temp_minus ac_temp_act">-</div>
+                            <div class="ac_temp_on_off">
+                                <div class="ac_temp_wrapper">
+                                    <div class="ac_temp_text">Temp :<span class="ac_temp_val" ac-min="16" ac-max="25" current-temp="20"></span></div>
+                                    <div class="ac_temp_plus_minus">
+                                        <div class="ac_temp_plus ac_temp_act">+</div><div class="ac_temp_minus ac_temp_act">-</div>
+                                    </div>
+                                </div>
+                                <div class="ac_onoff_wrapper">
+                                    <div class="ac_onoff_text">On/Off</div>
+                                    <div class="ac_onoff_button_wrapper"><div class="ac_onoff_button"></div></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="fan_mode_section">
+                                <div class="ac_temp_text">Fan Mode :</div>
+                                <div class="dropdown">
+                                    <button class="custom_btn custom_btn_primary dropdown-toggle" type="button" data-toggle="dropdown">Autoload speed
+                                    <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">HTML</a></li>
+                                        <li><a href="#">CSS</a></li>
+                                        <li><a href="#">JavaScript</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="ac_onoff_wrapper">
-                                <div class="ac_onoff_text">On/Off</div>
-                                <div class="ac_onoff_button_wrapper"><div class="ac_onoff_button"></div></div>
+                            <div class="ser_mode_section">
+                                <div class="ac_temp_text">Set Mode :</div>
+                                <div class="dropdown">
+                                    <button class="custom_btn custom_btn_primary dropdown-toggle" type="button" data-toggle="dropdown">Cool
+                                    <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">HTML</a></li>
+                                        <li><a href="#">CSS</a></li>
+                                        <li><a href="#">JavaScript</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ser_point_section">
+                                <div class="ac_temp_text">Set Point Mode :</div>
+                                <div class="dropdown">
+                                    <button class="custom_btn custom_btn_primary dropdown-toggle" type="button" data-toggle="dropdown">Cooling
+                                    <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">HTML</a></li>
+                                        <li><a href="#">CSS</a></li>
+                                        <li><a href="#">JavaScript</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="it_room_ac_off_button_wrapper">
@@ -184,6 +242,7 @@
 <!-- JAVASCRIPT JS  -->
 <script type="text/javascript" src="js/socket.io-1.3.5.js"></script>
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/vxgplayer-1.7.44.min.js"></script><!-- include JS-->
 <script type="text/javascript" src="js/new_custom.js"></script>
 <script type="text/javascript" src="js/socket_custom.js"></script>
