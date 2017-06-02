@@ -10,7 +10,7 @@ app.get('/',function(req,res){
 app.use(express.static('assets')); //This folder contains the css and js files
 
 // app.listen(3000);
-var io = require('socket.io').listen(app.listen(3000));
+var io = require('socket.io').listen(app.listen(3000,'192.168.0.9'));
 
 console.log("Running at Port 3000");
 
@@ -41,7 +41,7 @@ io.sockets.on('connection', function (socket) {
 	    { 'postman-token': 'bf759df7-714a-781f-f424-f1fc799ecc41',
 	     'cache-control': 'no-cache',
 	     authorization: 'Basic c2F0aGVlc2hAd2ViZXppLmNvbS5hdTpXZWJlemkxMiE=' } };
-        // console.log(options); 
+        console.log(options); 
 		request(options, function (error, response, body) {
 		  if (error) throw new Error(error);
           // console.log(response);

@@ -42,12 +42,20 @@ $(function () {
     });
     $('.it_room_light_act').click(function(){
         deviceid = $(this).parents('.it_room_light').data('deviceid');
-        status = $(this).parents('.it_room_light').attr('it-light-status');
+        light_status = $(this).parents('.it_room_light').attr('it-light-status');
+        if(light_status == 'on')
+            status = 'turnOn';
+        else
+            status = 'turnOff';
         socket.emit('api_data', { deviceid: deviceid, act:status,purpose: 'light_on_off' });
     });
     $('.floor_outer_light_act').click(function(){
         deviceid = $(this).parents('.floor_outer_tubelight').data('deviceid');
-        status = $(this).parents('.floor_outer_tubelight').attr('outer-tube-light-status');
+        light_status = $(this).parents('.floor_outer_tubelight').attr('outer-tube-light-status');
+        if(light_status == 'on')
+            status = 'turnOn';
+        else
+            status = 'turnOff';
         socket.emit('api_data', { deviceid: deviceid, act:status,purpose: 'light_on_off' });
     });
     // $('.ac_on_off_act').click(function(){

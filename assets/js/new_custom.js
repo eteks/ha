@@ -33,35 +33,6 @@ $(document).ready(function(){
         $('#backgroundPopup').hide();
     });
 
-    $('.popup_close').click(function() {
-        $(this).parent().fadeOut();
-        $('#backgroundPopup').hide();
-    });
-    if (window.location.hash.substr(1) == "triggerReloadCode") {
-	    window.location.hash = "";
-	    $('.vxgplayer').attr('url',localStorage.getItem("cctv_url"));
-	    // position_popup ();
-   		$('#backgroundPopup').show();
-   		$('.popup_pos,.popup_close').css({'visibility':'visible'});
-
-	}
-    $('.cctv_act').click(function() {
-
-        // $('.popup_pos').fadeIn();
-        // $('.popup_close').show();
-
-        // position_popup ();
-        window.location.hash = "triggerReloadCode";
-        localStorage.setItem("cctv_url", $(this).data('url'));
-        window.location.reload();
-
-    });
-    $('.popup_close,#backgroundPopup').click(function() {
-        // $(this).parent().fadeOut();
-        $('.popup_close').css({'visibility':'hidden'});
-        $('.popup_pos').css({'visibility':'hidden'});
-        $('#backgroundPopup').hide();
-    });
     // black screen dynamic height on window resize
     $(window).resize(function(){
        //positioning background
