@@ -21,24 +21,38 @@ $(function () {
         socket.emit('api_data', { deviceid: deviceid, act:'setValue',range:dimmer_range, purpose: 'light_dimmer' });
     });
     $('.tv_onoff_act').click(function(){
-        //old_design
-        // tv_status = $(this).parents('li').attr('tv-status');
-        //new_Design
-        tv_status = $(this).parents('.board_room_tv').attr('tv-status');
+        //old Fibaro API code
+        // //old_design
+        // // tv_status = $(this).parents('li').attr('tv-status');
+        // //new_Design
+        // tv_status = $(this).parents('.board_room_tv').attr('tv-status');
+        // if(tv_status == 'on')
+        //     buttonid = 'Button11';
+        // else
+        //     buttonid = 'Button12';
+        // //old_design
+        // // deviceid = $(this).parents('li').data('deviceid');
+        // //new_Design
+        // deviceid = $(this).parents('.board_room_tv').data('deviceid');
+        // socket.emit('api_data', { deviceid: deviceid, act:'pressButton',button_id:buttonid, purpose:'tv_control'});
+
+        tv_status = $(this).parents('li').attr('tv-status');
         if(tv_status == 'on')
-            buttonid = 'Button11';
+            press_key = 'KEY_POWERON';
         else
-            buttonid = 'Button12';
-        //old_design
-        // deviceid = $(this).parents('li').data('deviceid');
-        //new_Design
-        deviceid = $(this).parents('.board_room_tv').data('deviceid');
-        socket.emit('api_data', { deviceid: deviceid, act:'pressButton',button_id:buttonid, purpose:'tv_control'});
+            press_key = 'KEY_POWEROFF';
+        socket.emit('key', press_key);
+        
     });
     $('.tv_control_act').click(function(){
-        buttonid = $(this).data('buttonid');
-        deviceid = $(this).parents('.board_room_tv').data('deviceid');
-        socket.emit('api_data', { deviceid: deviceid, act:'pressButton',button_id:buttonid, purpose:'tv_control'});
+        //old Fibaro API code
+        // buttonid = $(this).data('buttonid');
+        // deviceid = $(this).parents('.board_room_tv').data('deviceid');
+        // socket.emit('api_data', { deviceid: deviceid, act:'pressButton',button_id:buttonid, purpose:'tv_control'});
+        
+        press_key = $(this).data('key');
+        alert(press_key);
+        socket.emit('key', press_key);
     });
     $('.it_room_light_act').click(function(){
         deviceid = $(this).parents('.it_room_light').data('deviceid');
@@ -72,8 +86,8 @@ $(function () {
     //     // deviceid = $(this).parents('li').data('deviceid');
     //     //new_Design
     //     deviceid = $(this).parents('.it_room_ac').data('deviceid');
-    //     // alert(status);
-    //     // alert(deviceid);
+    //     alert(status);
+    //     alert(deviceid);
     //     socket.emit('api_data', { deviceid: deviceid, act:status, purpose: 'ac_on_off' });
     // });
     $('.ac_temp_act').click(function(){

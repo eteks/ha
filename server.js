@@ -2,6 +2,7 @@ var express = require("express");
 var app     = express();
 var path    = require("path");
 var request = require("request");
+var SamsungRemote = require('samsung-remote');
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/new.html')); //__dirname : It will resolve to your project folder.
@@ -16,6 +17,7 @@ var io = require('socket.io').listen(app.listen(3000));
 console.log("Running at Port 3000");
 
 io.sockets.on('connection', function (socket) {
+    // console.log("User Connected");
     socket.on('api_data', function (data) {
     	console.log(data);
   //       url='http://192.168.0.18/api/callAction';
@@ -49,5 +51,26 @@ io.sockets.on('connection', function (socket) {
 		//   // console.log(body);
 		// });
     });
-	// console.log("User Connected");
+
+
+  //Functionality for Smart TV Samsung
+  var remote = new SamsungRemote({
+    // ip: '192.168.1.1'
+    // ip: '192.168.0.23'
+      ip: '192.168.0.15'
+  });
+
+  socket.on('key', function(key){
+    console.log("key function called");
+    remote.send(key, function callback(err){
+      if (err) {
+        console.log('Error ' + key + ' : ' + err);
+        socket.emit('key', 'Error ' + key + ' : ' + err);
+      } else {
+        console.log('Key : ' + key);
+        socket.emit('key', 'Key : ' + key);
+      }
+    });
+  });
+	
 });
