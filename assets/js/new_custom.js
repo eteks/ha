@@ -14,12 +14,12 @@ $(document).ready(function(){
         $('.vxgplayer').attr('url',localStorage.getItem("cctv_url"));
         position_popup ();
         $('#backgroundPopup').show();
-        $('.popup_pos,.popup_close').css({'visibility':'visible'});     
+        $('.popup_pos,.popup_close').css({'visibility':'visible'});
     }
-    
+
     $('.cctv_act').click(function() {
         // $('.popup_pos').fadeIn();
-        // $('.popup_close').show();       
+        // $('.popup_close').show();
         // position_popup ();
         window.location.hash = "triggerReloadCode";
         localStorage.setItem("cctv_url", $(this).data('url'));
@@ -58,7 +58,7 @@ $(document).ready(function(){
     } else {
         $('#backgroundPopup').height(win_height);
     }
-    
+
 
     var floor_height = $('.floor_plan').height();
     var floor_width = $('.floor_plan').width();
@@ -222,11 +222,13 @@ $(document).ready(function(){
         $('.ac_wrapper').show();
         $('.it_room_ac_off_button_wrapper').hide();
         $('.it_room_ac').css('background', 'url("../images/new_ac_on.png") no-repeat');
+        $('.it_room_ac').attr('it-room-ac-status','on');
     });
     $('.ac_onoff_button').on('click',function(){
         $('.ac_wrapper').hide();
         $('.it_room_ac_off_button_wrapper').show();
         $('.it_room_ac').css('background', 'url("../images/new_ac_off.png") no-repeat');
+        $('.it_room_ac').attr('it-room-ac-status','off');
     });
     $('.ac_temp_val').text($('.ac_temp_val').attr('current-temp'));
     $('.ac_temp_plus').on('click',function(){
