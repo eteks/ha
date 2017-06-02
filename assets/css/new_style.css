@@ -94,6 +94,11 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: rgba(226, 226, 226, 0.78);
 }
+html, body {
+  /*max-width: 100%;*/
+  /*overflow-x: hidden;*/
+  overflow: hidden;
+}
 #backgroundPopup {
   display:none;
   position:absolute;
@@ -103,25 +108,17 @@ input[type=range]:focus::-ms-fill-upper {
   background:#000000;
   z-index:90;
   -moz-opacity: 0.4;
-   opacity:.40;
-   filter: alpha(opacity=40);
+  opacity:.40;
+  filter: alpha(opacity=40);
 }
 .popup_pos {
-  /*background:#e9e9e9;*/
-  /*display:none;*/
-  /*width: 980px;*/
-  /*height: 560px;*/
-  /*border:1px solid #fff;*/
-  /*padding:8px 0px 0px;*/
   visibility:hidden;
   position:absolute !important;
-  /*margin-left:-1000px !important;*/
-  top:14%;
-  left:20%;
+  top:50%;
+  left:50%;
   z-index:200;
   margin: 0px auto;
 }
-
 .popup_close {
   background: url(../images/icons.png) 0px -113px repeat;
   position:absolute !important;
@@ -130,9 +127,9 @@ input[type=range]:focus::-ms-fill-upper {
   /*margin:-20px 0px 0px -10px;*/
   cursor:pointer;
   visibility:hidden;
-  top:13%;
-  left:19%;
-  /*z-index:100;*/
+  top:11%;
+  left:22%;
+  /*z-index:150;*/
 }
 
 .main_wrapper{
