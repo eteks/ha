@@ -279,4 +279,7 @@ $(document).ready(function(){
             $('.floor_outer_tubelight').css('background-image', 'url("../images/new_tube_light_off.png")');
         }
     });
+    $('.dropdown-menu li').on('click',function(){
+        $(this).parents('.dropdown').find('.custom_btn_primary').html($(this).text()+"<span class='caret'></span>");
+    });
 });
