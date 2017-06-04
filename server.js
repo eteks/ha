@@ -18,10 +18,10 @@ console.log("Running at Port 3000");
 
 io.sockets.on('connection', function (socket) {
     // console.log("User Connected");
-    socket.on('api_data', function (data) {
-    	console.log(data);
+  //   socket.on('api_data', function (data) {
+  //   	console.log(data);
   //       url='http://192.168.0.18/api/callAction';
-  //   	if(data.purpose == "light_on_off"){
+  //   	if(data.purpose == "light_on_off" || data.purpose == "ac_on_off"){
   //   		// console.log("if");  		
   //   		qs = { deviceID: data.deviceid, name: data.act };
   //   	}
@@ -35,7 +35,7 @@ io.sockets.on('connection', function (socket) {
   //       }
   //       else if(data.purpose == "ac_control"){
   //           // console.log("tv_control");
-  //           qs = { deviceID: data.deviceid, name: data.act, arg1:data.temp_val};
+  //           qs = { deviceID: data.deviceid, name: data.act, arg1:data.data_val};
   //       }
   //       var options = { method: 'GET',
 		// url: url,
@@ -50,7 +50,7 @@ io.sockets.on('connection', function (socket) {
   //         // console.log(response);
 		//   // console.log(body);
 		// });
-    });
+  //   });
 
 
   //Functionality for Smart TV Samsung

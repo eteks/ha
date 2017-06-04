@@ -51,7 +51,7 @@ $(function () {
         // socket.emit('api_data', { deviceid: deviceid, act:'pressButton',button_id:buttonid, purpose:'tv_control'});
         
         press_key = $(this).data('key');
-        alert(press_key);
+        // alert(press_key);
         socket.emit('key', press_key);
     });
     $('.it_room_light_act').click(function(){
@@ -72,28 +72,25 @@ $(function () {
             status = 'turnOff';
         socket.emit('api_data', { deviceid: deviceid, act:status,purpose: 'light_on_off' });
     });
-    // $('.ac_on_off_act').click(function(){
-    //     //old_design
-    //     // tv_status = $(this).parents('li').attr('tv-status');
-    //     //new_Design
-    //     ac_status = $(this).parents('.it_room_ac').attr('it-room-ac-status');
-    //     // alert(ac_status);
-    //     if(ac_status == 'on')
-    //         status = 'turnOn';
-    //     else
-    //         status = 'turnOff';
-    //     //old_design
-    //     // deviceid = $(this).parents('li').data('deviceid');
-    //     //new_Design
-    //     deviceid = $(this).parents('.it_room_ac').data('deviceid');
-    //     alert(status);
-    //     alert(deviceid);
-    //     socket.emit('api_data', { deviceid: deviceid, act:status, purpose: 'ac_on_off' });
-    // });
+    $('.ac_on_off_act').click(function(){
+        ac_status = $(this).parents('.it_room_ac').attr('it-room-ac-status');
+        if(ac_status == 'on')
+            status = 'turnOn';
+        else
+            status = 'turnOff';
+        deviceid = $(this).parents('.it_room_ac').data('deviceid');
+        socket.emit('api_data', { deviceid: deviceid, act:status, purpose: 'ac_on_off' });
+    });
     $('.ac_temp_act').click(function(){
         temp_val = $(this).parents('.it_room_ac').find('.ac_temp_val').text();
         deviceid = $(this).parents('.it_room_ac').data('deviceid');
-        socket.emit('api_data', { deviceid: deviceid, act:'setTargetLevel',temp_val:temp_val, purpose:'ac_control'});
+        socket.emit('api_data', { deviceid: deviceid, act:'setTargetLevel',data_val:temp_val, purpose:'ac_control'});
+    });
+    $('.accontrol_act li').click(function(){
+        ac_value = $(this).data('val');
+        deviceid = $(this).parents('ul').data('deviceid');
+        mode_type = $(this).parents('ul').data('name');
+        socket.emit('api_data', { deviceid: deviceid, act:mode_type,data_val:ac_value, purpose:'ac_control'});
     });
     
 });

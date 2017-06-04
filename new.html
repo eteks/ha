@@ -117,17 +117,17 @@
                                             <div class="tv_navigation_wrapper">
                                                 <div class="nav_row1">
                                                     <div class="nav_col1"> </div>
-                                                    <div class="nav_col2 viewable_arrow top_arrow"><div class="inner_top_arrow"></div></div>
+                                                    <div class="nav_col2 viewable_arrow top_arrow tv_control_act" data-buttonid="Button53"  data-key="KEY_UP"><div class="inner_top_arrow"></div></div>
                                                     <div class="nav_col3"> </div>
                                                 </div>
                                                 <div class="nav_row2">
-                                                    <div class="nav_col1 viewable_arrow left_arrow"><div class="inner_left_arrow"></div></div>
+                                                    <div class="nav_col1 viewable_arrow left_arrow tv_control_act" data-buttonid="Button53"  data-key="KEY_LEFT"><div class="inner_left_arrow"></div></div>
                                                     <div class="nav_col2"> </div>
-                                                    <div class="nav_col3 viewable_arrow right_arrow"><div class="inner_right_arrow"></div></div>
+                                                    <div class="nav_col3 viewable_arrow right_arrow tv_control_act" data-buttonid="Button53"  data-key="KEY_RIGHT"><div class="inner_right_arrow"></div></div>
                                                 </div>
                                                 <div class="nav_row3">
                                                     <div class="nav_col1"> </div>
-                                                    <div class="nav_col2 viewable_arrow down_arrow"><div class="inner_down_arrow"></div></div>
+                                                    <div class="nav_col2 viewable_arrow down_arrow tv_control_act" data-buttonid="Button53"  data-key="KEY_DOWN"><div class="inner_down_arrow"></div></div>
                                                     <div class="nav_col3"></div>
                                                 </div>
                                             </div>
@@ -156,23 +156,20 @@
                                 </div>
                                 <div class="ac_onoff_wrapper">
                                     <div class="ac_onoff_text">On/Off</div>
-                                    <div class="ac_onoff_button_wrapper"><div class="ac_onoff_button"></div></div>
+                                    <div class="ac_onoff_button_wrapper"><div class="ac_onoff_button ac_on_off_act"></div></div>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
-                            <div class="fan_mode_section">
-                                <div class="ac_temp_text">Fan Mode :</div>
+                            <div class="ser_point_section">
+                                <div class="ac_temp_text">Set Point Mode :</div>
                                 <div class="dropdown">
                                     <button class="custom_btn custom_btn_primary dropdown-toggle" type="button" data-toggle="dropdown">Select
                                     <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Auto low speed</a></li>
-                                        <li><a href="#">Low speed</a></li>
-                                        <li><a href="#">Auto High Speed</a></li>
-                                        <li><a href="#">High Speed</a></li>
-                                        <li><a href="#">Auto Medium Speed</a></li>
-                                        <li><a href="#">Medium Speed</a></li>
-                                        <li><a href="#">Off</a></li>
+                                    <ul class="dropdown-menu accontrol_act" data-deviceid="11" data-name="setSetpointMode">
+                                        <li data-val="1"><a href="#">Heating</a></li>
+                                        <li data-val="2"><a href="#">Cooling</a></li>
+                                        <li data-val="8"><a href="#">Dry Air</a></li>
+                                        <li data-val="10"><a href="#">Auto ChangeOver</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -181,30 +178,33 @@
                                 <div class="dropdown">
                                     <button class="custom_btn custom_btn_primary dropdown-toggle" type="button" data-toggle="dropdown">Select
                                     <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Off</a></li>
-                                        <li><a href="#">Heat</a></li>
-                                        <li><a href="#">Cool</a></li>
-                                        <li><a href="#">Resume</a></li>
-                                        <li><a href="#">Fan Only</a></li>
-                                        <li><a href="#">Dry Air</a></li>
-                                        <li><a href="#">Auto ChangeOver</a></li>
+                                    <ul class="dropdown-menu accontrol_act" data-deviceid="13" data-name="setMode">
+                                        <li data-val="0"><a href="#">Off</a></li>
+                                        <li data-val="1"><a href="#">Heat</a></li>
+                                        <li data-val="2"><a href="#">Cool</a></li>
+                                        <li data-val="5"><a href="#">Resume</a></li>
+                                        <li data-val="6"><a href="#">Fan Only</a></li>
+                                        <li data-val="8"><a href="#">Dry Air</a></li>
+                                        <li data-val="10"><a href="#">Auto ChangeOver</a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="ser_point_section">
-                                <div class="ac_temp_text">Set Point Mode :</div>
+                            <div class="fan_mode_section">
+                                <div class="ac_temp_text">Fan Mode :</div>
                                 <div class="dropdown">
                                     <button class="custom_btn custom_btn_primary dropdown-toggle" type="button" data-toggle="dropdown">Select
                                     <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Heating</a></li>
-                                        <li><a href="#">Cooling</a></li>
-                                        <li><a href="#">Dry Air</a></li>
-                                        <li><a href="#">Auto ChangeOver</a></li>
+                                    <ul class="dropdown-menu accontrol_act" data-deviceid="14" data-name="setFanMode">
+                                        <li data-val="0"><a href="#">Auto low speed</a></li>
+                                        <li data-val="1"><a href="#">Low speed</a></li>
+                                        <li data-val="2"><a href="#">Auto High Speed</a></li>
+                                        <li data-val="3"><a href="#">High Speed</a></li>
+                                        <li data-val="4"><a href="#">Auto Medium Speed</a></li>
+                                        <li data-val="5"><a href="#">Medium Speed</a></li>
+                                        <li data-val="128"><a href="#">Off</a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> 
                         </div>
                         <div class="it_room_ac_off_button_wrapper">
                             <div class="it_room_ac_off_button ac_on_off_act"></div>
